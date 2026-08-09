@@ -1,0 +1,7 @@
+# Ignore agent info
+.agents/*
+/.agents
+
+# Ignore legacy items
+legacy/*
+/legacy
