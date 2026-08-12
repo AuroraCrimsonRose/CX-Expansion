@@ -71,6 +71,7 @@ SoftwareType
                     CodeArt         1
                     Level           2
                     Submarkets      [ 0; 3; 0 ]
+                    FrameworkRequirement "Cloud Storage"
                 }
                 {
                     Name            "Heuristic Analysis"
