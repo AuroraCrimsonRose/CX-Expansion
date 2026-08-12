@@ -361,6 +361,71 @@
 
 ---
 
+## Computer
+*A complete desktop computer assembled from components.*
+
+### Base Features
+
+#### Device Assembly
+- **Required Processor (CPU)**
+  - *Required Framework:* Processor (CPU)
+  - *Level:* 1
+- **Required Motherboard**
+  - *Required Framework:* Motherboard
+  - *Level:* 1
+- **Required Memory (RAM)**
+  - *Required Framework:* Memory (RAM)
+  - *Level:* 1
+- **Required Data Storage**
+  - *Required Framework:* Data Storage
+  - *Level:* 1
+- **Required Power Supply (PSU)**
+  - *Required Framework:* Power Supply (PSU)
+  - *Level:* 1
+- **Required Device Case**
+  - *Required Framework:* Device Case
+  - *Level:* 1
+- **Required Operating System**
+  - *Required Framework:* Operating System
+  - *Level:* 1
+- **Optional GPU**
+  - *Required Framework:* Graphics Card (GPU)
+  - *Level:* 2
+
+
+---
+
+## Console
+*A gaming console assembled from components.*
+
+### Base Features
+
+#### Device Assembly
+- **Required Processor (CPU)**
+  - *Required Framework:* Processor (CPU)
+  - *Level:* 1
+- **Required Motherboard**
+  - *Required Framework:* Motherboard
+  - *Level:* 1
+- **Required Memory (RAM)**
+  - *Required Framework:* Memory (RAM)
+  - *Level:* 1
+- **Required Data Storage**
+  - *Required Framework:* Data Storage
+  - *Level:* 1
+- **Required Power Supply (PSU)**
+  - *Required Framework:* Power Supply (PSU)
+  - *Level:* 1
+- **Required Device Case**
+  - *Required Framework:* Device Case
+  - *Level:* 1
+- **Required Operating System**
+  - *Required Framework:* Operating System
+  - *Level:* 1
+
+
+---
+
 ## Game Controller
 *Advanced input devices for gaming and simulation.*
 
@@ -834,6 +899,40 @@
 
 ---
 
+## Handheld
+*A portable gaming handheld assembled from components.*
+
+### Base Features
+
+#### Device Assembly
+- **Required Processor (CPU)**
+  - *Required Framework:* Processor (CPU)
+  - *Level:* 1
+- **Required Motherboard**
+  - *Required Framework:* Motherboard
+  - *Level:* 1
+- **Required Memory (RAM)**
+  - *Required Framework:* Memory (RAM)
+  - *Level:* 1
+- **Required Data Storage**
+  - *Required Framework:* Data Storage
+  - *Level:* 1
+- **Required Battery**
+  - *Required Framework:* Battery
+  - *Level:* 1
+- **Required Display Panel**
+  - *Required Framework:* Display Panel
+  - *Level:* 1
+- **Required Device Case**
+  - *Required Framework:* Device Case
+  - *Level:* 1
+- **Required Operating System**
+  - *Required Framework:* Operating System
+  - *Level:* 1
+
+
+---
+
 ## IDE
 *Integrated Development Environment. Software used by developers to write code!*
 
@@ -968,6 +1067,77 @@
 - **Macro Keys & Polling**
   - *Description:* Extra programmable keys and 1000Hz USB polling rate.
   - *Unlocks in:* 2008
+  - *Level:* 2
+
+
+---
+
+## Kiosk
+*An embedded kiosk or ATM assembled from components.*
+
+### Base Features
+
+#### Device Assembly
+- **Required Processor (CPU)**
+  - *Required Framework:* Processor (CPU)
+  - *Level:* 1
+- **Required Motherboard**
+  - *Required Framework:* Motherboard
+  - *Level:* 1
+- **Required Memory (RAM)**
+  - *Required Framework:* Memory (RAM)
+  - *Level:* 1
+- **Required Data Storage**
+  - *Required Framework:* Data Storage
+  - *Level:* 1
+- **Required Power Supply (PSU)**
+  - *Required Framework:* Power Supply (PSU)
+  - *Level:* 1
+- **Required Display Panel**
+  - *Required Framework:* Display Panel
+  - *Level:* 1
+- **Required Device Case**
+  - *Required Framework:* Device Case
+  - *Level:* 1
+- **Required Operating System**
+  - *Required Framework:* Operating System
+  - *Level:* 1
+
+
+---
+
+## Laptop
+*A portable computer with integrated display and battery.*
+
+### Base Features
+
+#### Device Assembly
+- **Required Processor (CPU)**
+  - *Required Framework:* Processor (CPU)
+  - *Level:* 1
+- **Required Motherboard**
+  - *Required Framework:* Motherboard
+  - *Level:* 1
+- **Required Memory (RAM)**
+  - *Required Framework:* Memory (RAM)
+  - *Level:* 1
+- **Required Data Storage**
+  - *Required Framework:* Data Storage
+  - *Level:* 1
+- **Required Battery**
+  - *Required Framework:* Battery
+  - *Level:* 1
+- **Required Display Panel**
+  - *Required Framework:* Display Panel
+  - *Level:* 1
+- **Required Device Case**
+  - *Required Framework:* Device Case
+  - *Level:* 1
+- **Required Operating System**
+  - *Required Framework:* Operating System
+  - *Level:* 1
+- **Optional GPU**
+  - *Required Framework:* Graphics Card (GPU)
   - *Level:* 2
 
 
@@ -1314,26 +1484,6 @@
   - *Unlocks in:* 2010
   - *Level:* 2
 
-### Add-Ons
-
-#### Joystick
-- **Wireless**
-  - *Depends On:* Wireless communication
-  - *Required Framework:* Battery
-  - *Level:* 2
-- **Vibration**
-  - *Description:* Device go brrr
-  - *Level:* 1
-- **Motion detection**
-  - *Description:* Who doesn't want joysticks embedded in their TVs?
-  - *Level:* 2
-- **Built-in speaker**
-  - *Depends On:* Standardized input
-  - *Level:* 1
-- **RGB Lighting**
-  - *Depends On:* Standardized input
-  - *Level:* 1
-
 
 ---
 
@@ -1367,6 +1517,43 @@
   - *Description:* Fingerprint and FaceID confirmation for Mobile Wallets.
   - *Unlocks in:* 2014
   - *Level:* 3
+
+
+---
+
+## Phone
+*A smartphone assembled from mobile components.*
+
+### Base Features
+
+#### Device Assembly
+- **Required Processor (CPU)**
+  - *Required Framework:* Processor (CPU)
+  - *Level:* 1
+- **Required Motherboard**
+  - *Required Framework:* Motherboard
+  - *Level:* 1
+- **Required Memory (RAM)**
+  - *Required Framework:* Memory (RAM)
+  - *Level:* 1
+- **Required Data Storage**
+  - *Required Framework:* Data Storage
+  - *Level:* 1
+- **Required Battery**
+  - *Required Framework:* Battery
+  - *Level:* 1
+- **Required Display Panel**
+  - *Required Framework:* Display Panel
+  - *Level:* 1
+- **Required Device Case**
+  - *Required Framework:* Device Case
+  - *Level:* 1
+- **Required Wireless Antenna**
+  - *Required Framework:* Wireless Antenna
+  - *Level:* 1
+- **Required Operating System**
+  - *Required Framework:* Operating System
+  - *Level:* 1
 
 
 ---
@@ -1499,6 +1686,40 @@
 
 ---
 
+## SmartTV
+*A smart television assembled from components.*
+
+### Base Features
+
+#### Device Assembly
+- **Required Processor (CPU)**
+  - *Required Framework:* Processor (CPU)
+  - *Level:* 1
+- **Required Motherboard**
+  - *Required Framework:* Motherboard
+  - *Level:* 1
+- **Required Memory (RAM)**
+  - *Required Framework:* Memory (RAM)
+  - *Level:* 1
+- **Required Data Storage**
+  - *Required Framework:* Data Storage
+  - *Level:* 1
+- **Required Power Supply (PSU)**
+  - *Required Framework:* Power Supply (PSU)
+  - *Level:* 1
+- **Required Display Panel**
+  - *Required Framework:* Display Panel
+  - *Level:* 1
+- **Required Device Case**
+  - *Required Framework:* Device Case
+  - *Level:* 1
+- **Required Operating System**
+  - *Required Framework:* Operating System
+  - *Level:* 1
+
+
+---
+
 ## Data Storage
 *Physical media for storing data.*
 
@@ -1566,6 +1787,43 @@
 - **Global Chat & Emotes**
   - *Description:* Real-time chatrooms for live broadcasting.
   - *Unlocks in:* 2011
+  - *Level:* 1
+
+
+---
+
+## Tablet
+*A tablet device assembled from mobile components.*
+
+### Base Features
+
+#### Device Assembly
+- **Required Processor (CPU)**
+  - *Required Framework:* Processor (CPU)
+  - *Level:* 1
+- **Required Motherboard**
+  - *Required Framework:* Motherboard
+  - *Level:* 1
+- **Required Memory (RAM)**
+  - *Required Framework:* Memory (RAM)
+  - *Level:* 1
+- **Required Data Storage**
+  - *Required Framework:* Data Storage
+  - *Level:* 1
+- **Required Battery**
+  - *Required Framework:* Battery
+  - *Level:* 1
+- **Required Display Panel**
+  - *Required Framework:* Display Panel
+  - *Level:* 1
+- **Required Device Case**
+  - *Required Framework:* Device Case
+  - *Level:* 1
+- **Required Wireless Antenna**
+  - *Required Framework:* Wireless Antenna
+  - *Level:* 1
+- **Required Operating System**
+  - *Required Framework:* Operating System
   - *Level:* 1
 
 

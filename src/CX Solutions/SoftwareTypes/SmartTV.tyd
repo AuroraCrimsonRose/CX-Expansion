@@ -36,15 +36,16 @@
             Submarkets      [ 1; 1; 1 ]
             Features
             [
-                { Name "Processor (CPU)"; FrameworkRequirement "Processor (CPU)"; Level 1; DevTime 2; CodeArt 1; Submarkets [ 1; 1; 1 ] }
-                { Name "Motherboard"; FrameworkRequirement "Motherboard"; Level 1; DevTime 2; CodeArt 1; Submarkets [ 1; 1; 1 ] }
-                { Name "Memory (RAM)"; FrameworkRequirement "Memory (RAM)"; Level 1; DevTime 2; CodeArt 1; Submarkets [ 1; 1; 1 ] }
-                { Name "Data Storage"; FrameworkRequirement "Data Storage"; Level 1; DevTime 2; CodeArt 1; Submarkets [ 1; 1; 1 ] }
-                { Name "Power Supply (PSU)"; FrameworkRequirement "Power Supply (PSU)"; Level 1; DevTime 2; CodeArt 1; Submarkets [ 1; 1; 1 ] }
-                { Name "Display Panel"; FrameworkRequirement "Display Panel"; Level 1; DevTime 2; CodeArt 1; Submarkets [ 1; 1; 1 ] }
-                { Name "Device Case"; FrameworkRequirement "Device Case"; Level 1; DevTime 2; CodeArt 1; Submarkets [ 1; 1; 1 ] }
-                { Name "Operating System"; FrameworkRequirement "Operating System"; Level 1; DevTime 2; CodeArt 1; Submarkets [ 1; 1; 1 ] }
+                { Name "Required Processor (CPU)"; FrameworkRequirement "Processor (CPU)"; Level 1; DevTime 2; CodeArt 1; Submarkets [ 1; 1; 1 ] }
+                { Name "Required Motherboard"; FrameworkRequirement "Motherboard"; Level 1; DevTime 2; CodeArt 1; Submarkets [ 1; 1; 1 ] }
+                { Name "Required Memory (RAM)"; FrameworkRequirement "Memory (RAM)"; Level 1; DevTime 2; CodeArt 1; Submarkets [ 1; 1; 1 ] }
+                { Name "Required Data Storage"; FrameworkRequirement "Data Storage"; Level 1; DevTime 2; CodeArt 1; Submarkets [ 1; 1; 1 ] }
+                { Name "Required Power Supply (PSU)"; FrameworkRequirement "Power Supply (PSU)"; Level 1; DevTime 2; CodeArt 1; Submarkets [ 1; 1; 1 ] }
+                { Name "Required Display Panel"; FrameworkRequirement "Display Panel"; Level 1; DevTime 2; CodeArt 1; Submarkets [ 1; 1; 1 ] }
+                { Name "Required Device Case"; FrameworkRequirement "Device Case"; Level 1; DevTime 2; CodeArt 1; Submarkets [ 1; 1; 1 ] }
+                { Name "Required Operating System"; FrameworkRequirement "Operating System"; Level 1; DevTime 2; CodeArt 1; Submarkets [ 1; 1; 1 ] }
             ]
         }
     ]
 }
+

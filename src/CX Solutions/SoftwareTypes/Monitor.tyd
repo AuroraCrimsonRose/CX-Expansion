@@ -1,4 +1,4 @@
-SoftwareType
+﻿SoftwareType
 {
     Name            "Computer Monitor"
     Description     "Standalone display peripherals for desktop computers."
@@ -78,16 +78,9 @@ SoftwareType
     Features
     [
         {
-            Name            "Display Panel"
-            Spec            Hardware
-            Features
-            [
-                { Name "Display Panel"; FrameworkRequirement "Display Panel"; Level 1 }
-            ]
-        }
-        {
             Name            "Monitor Electronics"
             Spec            Hardware
+            FrameworkRequirement "Display Panel"
             DevTime         4
             CodeArt         1
             Submarkets      [ 2; 0; 0 ]
@@ -115,4 +108,5 @@ SoftwareType
         }
     ]
 }
+
 
