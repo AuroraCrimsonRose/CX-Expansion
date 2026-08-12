@@ -1,0 +1,21 @@
+CompanyType
+{
+    Specialization      "Visual Technologies"
+    PerYear             0.2
+    Min                 2
+    Max                 6
+    Frameworks          True
+    Types
+    [
+        {
+            Software    "Video Editor"
+            Chance      0.75
+            Force       True
+        }
+        {
+            Software    "Streaming Platform"
+            Chance      0.75
+            Force       True
+        }
+    ]
+}

@@ -1,0 +1,123 @@
+SoftwareType
+{
+    Name            "Power Supply (PSU)"
+    Description     "Provides regulated power to all components."
+    Random          0.1
+    IdealPrice      80
+    OptimalDevTime  30
+    OneClient       False
+    InHouse         False
+    Popularity      1.0
+    Retention       240
+    Iterative       0.6
+    Hardware        True
+    Manufacturing
+    {
+        Components
+        [
+            {
+                Name            Plastic
+                BuiltInThumbnail Plastic
+                Price           5
+                Time            4
+            }
+        ]
+        Processes
+        [
+            {
+                Inputs          [ Plastic ]
+                Output          Final
+            }
+        ]
+        FinalTime       4
+    }
+    SubmarketNames  [ Wattage; Efficiency; Modularity ]
+    NameGenerator   Software
+    Categories
+    [
+        {
+            Name            "Standard ATX PSU"
+            Description     "Standard desktop power supply."
+            Popularity      1.0
+            Retention       240
+            TimeScale       2
+            Iterative       0.85
+            Submarkets      [ 2; 2; 1 ]
+        }
+        {
+            Name            "SFX Power Supply"
+            Description     "Small form factor for mini-ITX builds."
+            Unlock          2005
+            Popularity      0.8
+            Retention       180
+            TimeScale       2
+            Iterative       0.85
+            Submarkets      [ 2; 2; 2 ]
+        }
+    ]
+    Features
+    [
+        {
+            Name            "Power Regulation"
+            Spec            Hardware
+            DevTime         4
+            CodeArt         1
+            Submarkets      [ 2; 2; 0 ]
+            Features
+            [
+                {
+                    Name            "Unrated / Cheap Capacitors"
+                    Description     "Extremely low quality. Massive bug rate representing a potential fire hazard."
+                    DevTime         1
+                    CodeArt         1
+                    Level           1
+                    Submarkets      [ 3; 0; 0 ]
+                }
+                {
+                    Name            "80-Plus White / Bronze"
+                    Description     "Basic efficiency certification. Reliable but not optimized."
+                    Unlock          2004
+                    DevTime         3
+                    CodeArt         1
+                    Level           2
+                    Submarkets      [ 2; 1; 0 ]
+                }
+                {
+                    Name            "80-Plus Gold"
+                    Description     "High efficiency and high-quality Japanese capacitors."
+                    Unlock          2008
+                    DevTime         5
+                    CodeArt         1
+                    Level           3
+                    Submarkets      [ 1; 3; 0 ]
+                }
+                {
+                    Name            "80-Plus Platinum / Titanium"
+                    Description     "Absolute peak efficiency with near-zero energy waste."
+                    Unlock          2012
+                    DevTime         7
+                    CodeArt         1
+                    Level           3
+                    Submarkets      [ 0; 3; 3 ]
+                }
+                {
+                    Name            "Non-Modular Cables"
+                    Description     "All cables are permanently attached."
+                    DevTime         1
+                    CodeArt         1
+                    Level           1
+                    Submarkets      [ 0; 0; 1 ]
+                }
+                {
+                    Name            "Fully Modular"
+                    Description     "Detach unnecessary cables for clean builds."
+                    Unlock          2006
+                    DevTime         3
+                    CodeArt         1
+                    Level           2
+                    Submarkets      [ 0; 1; 3 ]
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,165 @@
+SoftwareType
+{
+    Name            "Web Browser"
+    Description     "A platform for navigating the World Wide Web. License this out so other companies can build Websites on your browser!"
+    Unlock          1990
+    Random          0.10
+    IdealPrice      20
+    OptimalDevTime  24
+    OSSupport       True
+    OneClient       False
+    InHouse         False
+    Popularity      0.9
+    Retention       40
+    Iterative       0.70
+    SubmarketNames  [ Functionality; Usability; Customization ]
+    NameGenerator   Browser
+    Features
+    [
+        {
+            Name            "Interface"
+            Spec            2D
+            DevTime         4
+            CodeArt         0.5
+            Submarkets      [ 1; 2; 1 ]
+            Features
+            [
+                {
+                    Name            "Tabs"
+                    Description     "Multitasking through tabbed browsing."
+                    DevTime         2
+                    CodeArt         1
+                    Level           1
+                    Submarkets      [ 1; 1; 0 ]
+                }
+                {
+                    Name            "Bookmarks"
+                    Description     "Save your favorite sites for later."
+                    DevTime         2
+                    CodeArt         0.8
+                    Level           1
+                    Submarkets      [ 1; 2; 0 ]
+                }
+                {
+                    Name            "Extensions & Themes"
+                    Description     "Allow users to customize their browsing experience."
+                    Unlock          2005
+                    DevTime         4
+                    CodeArt         0.5
+                    Level           2
+                    Submarkets      [ 0; 2; 3 ]
+                }
+                {
+                    Name            "Password Manager"
+                    Description     "Integrated secure credential storage."
+                    Unlock          2002
+                    DevTime         3
+                    CodeArt         1
+                    Level           2
+                    Submarkets      [ 2; 1; 0 ]
+                }
+                {
+                    Name            "Mobile Interface"
+                    Description     "Touch-optimized layout for porting to smart devices."
+                    Unlock          2007
+                    DevTime         3
+                    CodeArt         0.8
+                    Level           1
+                    Submarkets      [ 1; 2; 0 ]
+                }
+            ]
+        }
+        {
+            Name            "System"
+            Spec            System
+            DevTime         5
+            CodeArt         1
+            Submarkets      [ 3; 0; 0 ]
+            Features
+            [
+                {
+                    Name            "WebGL Support"
+                    Description     "Render interactive 2D and 3D graphics inside the browser."
+                    Unlock          2011
+                    DevTime         5
+                    CodeArt         1
+                    Level           2
+                    Submarkets      [ 2; 0; 1 ]
+                }
+                {
+                    Name            "WebAssembly (Wasm)"
+                    Description     "Execute near-native code performance in the browser."
+                    Unlock          2017
+                    DevTime         6
+                    CodeArt         1
+                    Level           3
+                    Submarkets      [ 3; 0; 0 ]
+                }
+                {
+                    Name            "WebGPU (WGSL)"
+                    Description     "Next-generation graphics and compute API for the web."
+                    Unlock          2022
+                    DevTime         7
+                    CodeArt         1
+                    Level           3
+                    Submarkets      [ 3; 1; 0 ]
+                }
+            ]
+        }
+        {
+            Name            "Network"
+            Spec            Network
+            DevTime         5
+            CodeArt         1
+            Submarkets      [ 2; 1; 0 ]
+            Features
+            [
+                {
+                    Name            "HTML Rendering Engine"
+                    Description     "The core technology for displaying web pages."
+                    DevTime         5
+                    CodeArt         1
+                    Level           1
+                    Submarkets      [ 2; 1; 0 ]
+                }
+                {
+                    Name            "HTTPS Encryption"
+                    Description     "Secure socket layer for safe browsing."
+                    Unlock          1994
+                    DevTime         4
+                    CodeArt         1
+                    Level           2
+                    Submarkets      [ 3; 0; 0 ]
+                }
+                {
+                    Name            "Cloud Sync"
+                    Description     "Sync history and tabs across devices."
+                    Unlock          2010
+                    DevTime         5
+                    CodeArt         1
+                    Level           2
+                    Submarkets      [ 1; 2; 0 ]
+                }
+                {
+                    Name            "Integrated VPN"
+                    Description     "Mask your IP and browse securely."
+                    Unlock          2015
+                    DevTime         4
+                    CodeArt         1
+                    Level           3
+                    Submarkets      [ 3; 0; 1 ]
+                    Server          0.0002
+                }
+                {
+                    Name            "Anti-Phishing Protection"
+                    Description     "Actively blocks malicious sites and downloads."
+                    Unlock          2006
+                    DevTime         4
+                    CodeArt         1
+                    Level           2
+                    Submarkets      [ 2; 1; 1 ]
+                }
+            ]
+        }
+    ]
+}

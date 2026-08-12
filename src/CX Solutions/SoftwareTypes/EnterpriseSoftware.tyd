@@ -1,0 +1,112 @@
+SoftwareType
+{
+    Name            "Enterprise Software"
+    Description     "Heavy-duty corporate software for massive companies."
+    Random          0.1
+    IdealPrice      500
+    OptimalDevTime  60
+    OneClient       False
+    InHouse         False
+    Popularity      0.8
+    Retention       360
+    Iterative       0.9
+    Hardware        False
+    SubmarketNames  [ Management; Analytics; Logistics ]
+    NameGenerator   Software
+    Categories
+    [
+        {
+            Name            "CRM"
+            Description     "Customer Relationship Management."
+            Popularity      0.9
+            Retention       360
+            TimeScale       2
+            Iterative       0.85
+            Submarkets      [ 3; 1; 0 ]
+        }
+        {
+            Name            "ERP System"
+            Description     "Enterprise Resource Planning (e.g. SAGE)."
+            Popularity      0.8
+            Retention       400
+            TimeScale       3
+            Iterative       0.85
+            Submarkets      [ 2; 2; 1 ]
+        }
+        {
+            Name            "BI Tools"
+            Description     "Business Intelligence and data analytics."
+            Popularity      0.7
+            Retention       240
+            TimeScale       2
+            Iterative       0.85
+            Submarkets      [ 0; 3; 0 ]
+        }
+        {
+            Name            "TMS"
+            Description     "Transportation Management System."
+            Popularity      0.6
+            Retention       240
+            TimeScale       2
+            Iterative       0.85
+            Submarkets      [ 1; 0; 3 ]
+        }
+    ]
+    Features
+    [
+        {
+            Name            "Database Engine"
+            Spec            System
+            DevTime         5
+            CodeArt         1
+            Submarkets      [ 1; 1; 1 ]
+            Features
+            [
+                {
+                    Name            "Relational Database"
+                    Description     "Standard SQL backend."
+                    DevTime         4
+                    CodeArt         1
+                    Level           1
+                    Submarkets      [ 1; 2; 1 ]
+                }
+                {
+                    Name            "Real-Time Data Warehouse"
+                    Description     "Massive parallel processing for instantaneous metrics."
+                    Unlock          2010
+                    DevTime         7
+                    CodeArt         1
+                    Level           2
+                    Submarkets      [ 0; 3; 1 ]
+                }
+            ]
+        }
+        {
+            Name            "Corporate Tools"
+            Spec            Network
+            DevTime         4
+            CodeArt         1
+            Submarkets      [ 2; 0; 2 ]
+            Features
+            [
+                {
+                    Name            "Sales Tracking"
+                    Description     "Lead generation and pipeline management."
+                    DevTime         3
+                    CodeArt         1
+                    Level           1
+                    Submarkets      [ 3; 0; 0 ]
+                }
+                {
+                    Name            "Supply Chain Routing"
+                    Description     "GPS tracking and fleet route optimization."
+                    Unlock          2005
+                    DevTime         5
+                    CodeArt         1
+                    Level           2
+                    Submarkets      [ 0; 0; 3 ]
+                }
+            ]
+        }
+    ]
+}

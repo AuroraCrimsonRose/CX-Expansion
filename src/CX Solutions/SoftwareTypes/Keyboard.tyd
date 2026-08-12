@@ -1,0 +1,117 @@
+SoftwareType
+{
+    Name            "Keyboard"
+    Description     "Typing peripherals for text input and gaming."
+    Random          0.1
+    IdealPrice      50
+    OptimalDevTime  25
+    OneClient       False
+    InHouse         False
+    Popularity      1.0
+    Retention       240
+    Iterative       0.8
+    Hardware        True
+    Manufacturing
+    {
+        Components
+        [
+            {
+                Name            Plastic
+                BuiltInThumbnail Plastic
+                Price           5
+                Time            4
+            }
+        ]
+        Processes
+        [
+            {
+                Inputs          [ Plastic ]
+                Output          Final
+            }
+        ]
+        FinalTime       4
+    }
+    SubmarketNames  [ Typing Feel; Gaming; Portability ]
+    NameGenerator   Hardware
+    Categories
+    [
+        {
+            Name            "Membrane Keyboard"
+            Description     "Standard, cheap rubber dome keyboard."
+            Popularity      1.0
+            Retention       120
+            TimeScale       1
+            Iterative       0.85
+            Submarkets      [ 1; 1; 2 ]
+        }
+        {
+            Name            "Mechanical Keyboard"
+            Description     "Individual physical switches for each key. Highly tactile and durable."
+            Popularity      0.8
+            Retention       360
+            TimeScale       2
+            Iterative       0.85
+            Submarkets      [ 3; 3; 0 ]
+        }
+        {
+            Name            "Ergonomic Keyboard"
+            Description     "Split and angled layout to prevent wrist strain."
+            Unlock          1994
+            Popularity      0.5
+            Retention       360
+            TimeScale       2
+            Iterative       0.85
+            Submarkets      [ 3; 0; 1 ]
+        }
+        {
+            Name            "Compact Keyboard (60% / TKL)"
+            Description     "Removes the numpad for better mouse space and portability."
+            Unlock          2010
+            Popularity      0.7
+            Retention       240
+            TimeScale       2
+            Iterative       0.85
+            Submarkets      [ 0; 2; 3 ]
+        }
+    ]
+    Features
+    [
+        {
+            Name            "Keyboard Features"
+            Spec            Hardware
+            DevTime         2
+            CodeArt         1
+            Submarkets      [ 1; 1; 1 ]
+            Features
+            [
+                {
+                    Name            "Wireless / Bluetooth"
+                    Description     "Cut the cord. Requires internal batteries."
+                    Unlock          2003
+                    DevTime         3
+                    CodeArt         1
+                    Level           1
+                    Submarkets      [ 0; 0; 3 ]
+                }
+                {
+                    Name            "RGB Backlighting"
+                    Description     "Per-key customizable lighting."
+                    Unlock          2013
+                    DevTime         3
+                    CodeArt         1
+                    Level           2
+                    Submarkets      [ 0; 3; 0 ]
+                }
+                {
+                    Name            "Macro Keys & Polling"
+                    Description     "Extra programmable keys and 1000Hz USB polling rate."
+                    Unlock          2008
+                    DevTime         3
+                    CodeArt         1
+                    Level           2
+                    Submarkets      [ 0; 3; 0 ]
+                }
+            ]
+        }
+    ]
+}

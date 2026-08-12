@@ -1,0 +1,159 @@
+SoftwareType
+{
+    Name            "BIOS / Firmware"
+    Description     "The low-level firmware required to initialize hardware before an OS loads. Required to build Motherboards and GPUs!"
+    Random          0.1
+    IdealPrice      25
+    OptimalDevTime  30
+    OneClient       False
+    InHouse         True
+    Popularity      0.8
+    Retention       180
+    Iterative       0.8
+    SubmarketNames  [ Stability; Overclocking; Security ]
+    NameGenerator   Software
+    Categories
+    [
+        {
+            Name            "Legacy BIOS"
+            Description     "Basic 16-bit text-based firmware."
+            Popularity      1.0
+            Retention       120
+            TimeScale       2
+            Iterative       0.85
+            Submarkets      [ 3; 0; 1 ]
+        }
+        {
+            Name            "Minimal Boot ROM"
+            Description     "Tiny bootstrap code for consoles and early handhelds."
+            Popularity      0.8
+            Retention       180
+            TimeScale       1
+            Iterative       0.85
+            Submarkets      [ 1; 2; 1 ]
+        }
+        {
+            Name            "Mobile Firmware"
+            Description     "Bootloader and baseband init for phones and tablets."
+            Unlock          1995
+            Popularity      0.9
+            Retention       180
+            TimeScale       2
+            Iterative       0.85
+            Submarkets      [ 2; 1; 1 ]
+        }
+        {
+            Name            "UEFI Firmware"
+            Description     "Modern firmware with GUI and fast boot."
+            Unlock          2005
+            Popularity      0.9
+            Retention       120
+            TimeScale       3
+            Iterative       0.85
+            Submarkets      [ 2; 2; 2 ]
+        }
+        {
+            Name            "Custom ROM / Coreboot"
+            Description     "Open-source or heavily customized fast bootloader."
+            Unlock          2010
+            Popularity      0.6
+            Retention       90
+            TimeScale       2
+            Iterative       0.85
+            Submarkets      [ 1; 3; 1 ]
+        }
+    ]
+    Features
+    [
+        {
+            Name            "Hardware Initialization"
+            Spec            Hardware
+            DevTime         4
+            CodeArt         1
+            Submarkets      [ 2; 0; 2 ]
+            Features
+            [
+                {
+                    Name            "Basic Component Init"
+                    Description     "Initializes RAM, CPU, and basic IO."
+                    DevTime         3
+                    CodeArt         1
+                    Level           1
+                    Submarkets      [ 2; 0; 0 ]
+                }
+                {
+                    Name            "CSM (Compatibility Support)"
+                    Description     "Allows modern UEFI to boot legacy OSs."
+                    Unlock          2006
+                    DevTime         3
+                    CodeArt         1
+                    Level           1
+                    Submarkets      [ 2; 0; 1 ]
+                }
+                {
+                    Name            "Advanced Hardware Diagnostics"
+                    Description     "Self-tests (POST) and memory checks."
+                    Unlock          1990
+                    DevTime         4
+                    CodeArt         1
+                    Level           2
+                    Submarkets      [ 1; 0; 1 ]
+                }
+                {
+                    Name            "Peripheral Interface"
+                    Description     "Deep support for USB and modern peripherals pre-OS."
+                    Unlock          1996
+                    DevTime         4
+                    CodeArt         1
+                    Level           2
+                    Submarkets      [ 2; 0; 1 ]
+                }
+            ]
+        }
+        {
+            Name            "System Tuning"
+            Spec            System
+            DevTime         4
+            CodeArt         1
+            Submarkets      [ 0; 3; 1 ]
+            Features
+            [
+                {
+                    Name            "Basic Clock Control"
+                    Description     "Ability to set system time and basic bus speeds."
+                    DevTime         2
+                    CodeArt         1
+                    Level           1
+                    Submarkets      [ 0; 1; 1 ]
+                }
+                {
+                    Name            "Advanced Overclocking & AMP"
+                    Description     "Voltage control, Advanced Memory Profiles (AMP)."
+                    Unlock          1998
+                    DevTime         5
+                    CodeArt         1
+                    Level           2
+                    Submarkets      [ 0; 3; 0 ]
+                }
+                {
+                    Name            "Smart Fan Control"
+                    Description     "Temperature based PWM fan curves."
+                    Unlock          2005
+                    DevTime         4
+                    CodeArt         1
+                    Level           2
+                    Submarkets      [ 1; 2; 0 ]
+                }
+                {
+                    Name            "Secure Boot (TPM)"
+                    Description     "Cryptographic checks to prevent unauthorized OS loading."
+                    Unlock          2012
+                    DevTime         6
+                    CodeArt         1
+                    Level           3
+                    Submarkets      [ 2; 0; 3 ]
+                }
+            ]
+        }
+    ]
+}

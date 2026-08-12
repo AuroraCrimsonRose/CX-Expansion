@@ -1,0 +1,171 @@
+SoftwareType
+{
+    Name            "Web Application"
+    Description     "A digital service hosted on the web. Develop this for Web Browsers to gain a massive audience!"
+    Unlock          1995
+    Random          0.10
+    IdealPrice      15
+    OptimalDevTime  18
+    OneClient       False
+    InHouse         False
+    Popularity      1.0
+    Retention       45
+    Iterative       0.80
+    SubmarketNames  [ Content; Social; Features ]
+    NameGenerator   Database
+    Categories
+    [
+        {
+            Name            "Search Engine"
+            Description     "A tool to index and search the entire web."
+            Popularity      0.9
+            Retention       60
+            TimeScale       1
+            Iterative       0.85
+            Submarkets      [ 2; 0; 1 ]
+        }
+        {
+            Name            "Social Media"
+            Description     "A platform for users to connect and share."
+            Unlock          2004
+            Popularity      1.0
+            Retention       50
+            TimeScale       1
+            Iterative       0.85
+            Submarkets      [ 1; 3; 0 ]
+        }
+        {
+            Name            "Video Sharing"
+            Description     "Host and stream user-uploaded videos."
+            Unlock          2005
+            Popularity      1.0
+            Retention       40
+            TimeScale       2
+            Iterative       0.85
+            Submarkets      [ 3; 0; 0 ]
+        }
+        {
+            Name            "Web Game"
+            Description     "A lightweight game that runs directly in the browser (e.g., Flash, HTML5)."
+            Unlock          1997
+            Popularity      0.9
+            Retention       55
+            TimeScale       2
+            Iterative       0.85
+            Submarkets      [ 1; 1; 1 ]
+        }
+        {
+            Name            "Learning Management System"
+            Description     "LMS platforms for schools and corporate training. (Subscription/Licensing highly recommended)"
+            Unlock          2000
+            Popularity      0.7
+            Retention       70
+            TimeScale       2
+            Iterative       0.85
+            Submarkets      [ 2; 1; 0 ]
+        }
+        {
+            Name            "Inventory Management System"
+            Description     "IMS for retail and warehouse tracking. (Can be licensed or sold one-time)"
+            Unlock          1998
+            Popularity      0.6
+            Retention       80
+            TimeScale       3
+            Iterative       0.85
+            Submarkets      [ 1; 2; 0 ]
+        }
+    ]
+    Features
+    [
+        {
+            Name            "Interface"
+            Spec            2D
+            DevTime         4
+            CodeArt         0.5
+            Submarkets      [ 1; 2; 0 ]
+            Features
+            [
+                {
+                    Name            "Responsive Design"
+                    Description     "Ensures the site looks good on any screen size."
+                    DevTime         3
+                    CodeArt         0.5
+                    Level           1
+                    Submarkets      [ 1; 1; 0 ]
+                }
+                {
+                    Name            "User Profiles"
+                    Description     "Allow users to customize their identity."
+                    DevTime         2
+                    CodeArt         0.8
+                    Level           1
+                    Submarkets      [ 0; 2; 1 ]
+                }
+            ]
+        }
+        {
+            Name            "System"
+            Spec            System
+            DevTime         4
+            CodeArt         1
+            Submarkets      [ 2; 1; 0 ]
+            Features
+            [
+                {
+                    Name            "Content Algorithm"
+                    Description     "Recommends content to keep users scrolling."
+                    Unlock          2008
+                    DevTime         6
+                    CodeArt         1
+                    Level           2
+                    Submarkets      [ 1; 2; 0 ]
+                }
+                {
+                    Name            "Ad Monetization Integration"
+                    Description     "Inject ad slots into the website. (Highly recommended to use an Ad Network Framework here!)"
+                    DevTime         2
+                    CodeArt         1
+                    Level           1
+                    Submarkets      [ 0; 0; 0 ]
+                }
+                {
+                    Name            "End-to-End Encryption"
+                    Description     "Encrypts user data so only they can read it."
+                    Unlock          2014
+                    DevTime         5
+                    CodeArt         1
+                    Level           2
+                    Submarkets      [ 1; 0; 2 ]
+                }
+                {
+                    Name            "Two-Factor Authentication"
+                    Description     "Secures user accounts with an extra layer of protection."
+                    Unlock          2011
+                    DevTime         3
+                    CodeArt         1
+                    Level           2
+                    Submarkets      [ 0; 0; 1 ]
+                }
+            ]
+        }
+        {
+            Name            "Network"
+            Spec            Network
+            DevTime         5
+            CodeArt         1
+            Submarkets      [ 2; 0; 1 ]
+            Features
+            [
+                {
+                    Name            "Massive Database Syncing"
+                    Description     "Handle millions of users reading and writing data simultaneously."
+                    DevTime         6
+                    CodeArt         1
+                    Level           2
+                    Submarkets      [ 2; 1; 0 ]
+                    Server          0.0005
+                }
+            ]
+        }
+    ]
+}

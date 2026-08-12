@@ -1,0 +1,116 @@
+SoftwareType
+{
+    Name            "VPN Client"
+    Description     "Virtual Private Network software for secure and private web browsing."
+    Random          0.1
+    IdealPrice      40
+    OptimalDevTime  35
+    OneClient       False
+    InHouse         False
+    Popularity      0.9
+    Retention       240
+    Iterative       0.8
+    Hardware        False
+    SubmarketNames  [ Privacy; Speed; Bypassing ]
+    NameGenerator   Software
+    Categories
+    [
+        {
+            Name            "Corporate Intranet VPN"
+            Description     "Allows remote workers to securely connect to the office network."
+            Popularity      0.5
+            Retention       360
+            TimeScale       2
+            Iterative       0.85
+            Submarkets      [ 3; 1; 0 ]
+        }
+        {
+            Name            "Consumer Privacy VPN"
+            Description     "Routes traffic through global servers to hide IP addresses."
+            Unlock          2012
+            Popularity      1.0
+            Retention       360
+            TimeScale       3
+            Iterative       0.85
+            Submarkets      [ 3; 2; 3 ]
+        }
+        {
+            Name            "Next-Gen WireGuard VPN"
+            Description     "Uses the modern WireGuard protocol for incredibly fast and lean cryptography."
+            Unlock          2019
+            Popularity      0.9
+            Retention       360
+            TimeScale       4
+            Iterative       0.85
+            Submarkets      [ 3; 3; 1 ]
+        }
+    ]
+    Features
+    [
+        {
+            Name            "Tunneling Features"
+            Spec            Network
+            DevTime         3
+            CodeArt         1
+            Submarkets      [ 3; 2; 2 ]
+            Features
+            [
+                {
+                    Name            "Split Tunneling"
+                    Description     "Allows specific apps to bypass the VPN for lower latency."
+                    Unlock          2014
+                    DevTime         4
+                    CodeArt         1
+                    Level           1
+                    Submarkets      [ 0; 3; 0 ]
+                }
+                {
+                    Name            "Automatic Kill Switch"
+                    Description     "Immediately severs internet connection if the VPN drops, preventing IP leaks."
+                    Unlock          2013
+                    DevTime         4
+                    CodeArt         1
+                    Level           2
+                    Submarkets      [ 3; 0; 0 ]
+                }
+                {
+                    Name            "Obfuscated Servers"
+                    Description     "Disguises VPN traffic as regular web traffic to bypass national firewalls."
+                    Unlock          2016
+                    DevTime         5
+                    CodeArt         1
+                    Level           3
+                    Submarkets      [ 3; 0; 3 ]
+                }
+            ]
+        }
+        {
+            Name            "Privacy Guarantees"
+            Spec            System
+            DevTime         2
+            CodeArt         1
+            Submarkets      [ 3; 0; 0 ]
+            Features
+            [
+                {
+                    Name            "Strict No-Logs Policy"
+                    Description     "Ensures no user data is stored on the servers (RAM-only architecture)."
+                    Unlock          2015
+                    DevTime         3
+                    CodeArt         1
+                    Level           1
+                    Submarkets      [ 3; 0; 0 ]
+                }
+                {
+                    Name            "Ad & Tracker Blocker"
+                    Description     "DNS-level filtering to block malicious domains."
+                    Unlock          2017
+                    DevTime         3
+                    CodeArt         1
+                    Level           2
+                    Submarkets      [ 2; 1; 1 ]
+                }
+            ]
+        }
+    ]
+}

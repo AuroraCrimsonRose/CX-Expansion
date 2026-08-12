@@ -1,0 +1,117 @@
+SoftwareType
+{
+    Name            "Memory (RAM)"
+    Description     "Volatile memory modules for temporary fast storage."
+    Random          0.1
+    IdealPrice      80
+    OptimalDevTime  30
+    OneClient       False
+    InHouse         False
+    Popularity      1.0
+    Retention       240
+    Iterative       0.9
+    Hardware        True
+    Manufacturing
+    {
+        Components
+        [
+            {
+                Name            Plastic
+                BuiltInThumbnail Plastic
+                Price           5
+                Time            4
+            }
+        ]
+        Processes
+        [
+            {
+                Inputs          [ Plastic ]
+                Output          Final
+            }
+        ]
+        FinalTime       4
+    }
+    SubmarketNames  [ Speed; Capacity; Stability ]
+    NameGenerator   Software
+    Categories
+    [
+        {
+            Name            "Desktop DIMM"
+            Description     "Standard PC memory stick."
+            Popularity      1.0
+            Retention       240
+            TimeScale       2
+            Iterative       0.85
+            Submarkets      [ 1; 2; 1 ]
+        }
+        {
+            Name            "Laptop SO-DIMM"
+            Description     "Smaller memory for portables."
+            Unlock          1997
+            Popularity      0.8
+            Retention       180
+            TimeScale       2
+            Iterative       0.85
+            Submarkets      [ 1; 2; 1 ]
+        }
+        {
+            Name            "Mobile LPDDR (Soldered)"
+            Description     "Low power embedded RAM for phones and tablets."
+            Unlock          2002
+            Popularity      1.0
+            Retention       120
+            TimeScale       1
+            Iterative       0.85
+            Submarkets      [ 1; 2; 1 ]
+        }
+        {
+            Name            "Embedded / Unified RAM"
+            Description     "Soldered RAM for consoles, SBCs, and Smart TVs."
+            Unlock          1994
+            Popularity      0.8
+            Retention       180
+            TimeScale       2
+            Iterative       0.85
+            Submarkets      [ 2; 1; 1 ]
+        }
+    ]
+    Features
+    [
+        {
+            Name            "Memory Architecture"
+            Spec            Hardware
+            DevTime         3
+            CodeArt         1
+            Submarkets      [ 2; 2; 1 ]
+            Features
+            [
+                {
+                    Name            "Memory Chips (DRAM)"
+                    Description     "The silicon chips storing the data."
+                    DevTime         4
+                    CodeArt         1
+                    Level           1
+                    Submarkets      [ 0; 3; 0 ]
+                }
+                {
+                    Name            "Heatsink / RGB"
+                    Description     "Cooling solutions and fancy lights."
+                    Unlock          2010
+                    DevTime         2
+                    CodeArt         1
+                    Level           2
+                    Submarkets      [ 1; 0; 0 ]
+                }
+                {
+                    Name            "ECC Logic"
+                    Description     "Error-correcting code for server stability."
+                    Unlock          1995
+                    DevTime         4
+                    CodeArt         1
+                    Level           2
+                    Submarkets      [ 0; 0; 3 ]
+                }
+            ]
+        }
+    ]
+}

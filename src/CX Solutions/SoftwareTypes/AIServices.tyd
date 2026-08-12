@@ -1,0 +1,128 @@
+SoftwareType
+{
+    Name            "AI Services"
+    Description     "Artificial Intelligence, Machine Learning models, and Neural Networks."
+    Random          0.1
+    IdealPrice      150
+    OptimalDevTime  70
+    OneClient       False
+    InHouse         False
+    Popularity      1.0
+    Retention       240
+    Iterative       0.8
+    Hardware        False
+    SubmarketNames  [ Reasoning; Creativity; Automation ]
+    NameGenerator   Software
+    Categories
+    [
+        {
+            Name            "Virtual Assistant"
+            Description     "Voice-activated assistants capable of basic tasks (e.g., Siri, Alexa)."
+            Unlock          2011
+            Popularity      0.8
+            Retention       240
+            TimeScale       3
+            Iterative       0.85
+            Submarkets      [ 1; 0; 3 ]
+        }
+        {
+            Name            "Machine Learning API"
+            Description     "Enterprise computer vision and predictive data models."
+            Unlock          2016
+            Popularity      0.6
+            Retention       360
+            TimeScale       5
+            Iterative       0.85
+            Submarkets      [ 3; 1; 2 ]
+        }
+        {
+            Name            "Large Language Model (LLM)"
+            Description     "Advanced conversational agents running on massive server clusters."
+            Unlock          2022
+            Popularity      1.0
+            Retention       360
+            TimeScale       6
+            Iterative       0.85
+            Submarkets      [ 3; 3; 1 ]
+        }
+        {
+            Name            "Generative Diffusion Model"
+            Description     "AI that generates images, video, and audio from text prompts."
+            Unlock          2022
+            Popularity      0.9
+            Retention       180
+            TimeScale       5
+            Iterative       0.85
+            Submarkets      [ 1; 3; 1 ]
+        }
+    ]
+    Features
+    [
+        {
+            Name            "Neural Architecture"
+            Spec            System
+            DevTime         5
+            CodeArt         1
+            Submarkets      [ 3; 1; 1 ]
+            Features
+            [
+                {
+                    Name            "Deep Learning Framework"
+                    Description     "Multi-layered artificial neural networks."
+                    Unlock          2012
+                    DevTime         5
+                    CodeArt         1
+                    Level           1
+                    Submarkets      [ 3; 1; 1 ]
+                }
+                {
+                    Name            "Natural Language Processing"
+                    Description     "Allows the software to comprehend human syntax and intent."
+                    Unlock          2011
+                    DevTime         5
+                    CodeArt         1
+                    Level           2
+                    Submarkets      [ 3; 2; 0 ]
+                }
+                {
+                    Name            "Transformer Architecture"
+                    Description     "The revolutionary attention mechanism that powers modern LLMs."
+                    Unlock          2017
+                    DevTime         7
+                    CodeArt         1
+                    Level           3
+                    Server          3.0
+                    Submarkets      [ 3; 3; 0 ]
+                }
+                {
+                    Name            "Web Scraping Pipeline"
+                    Description     "Aggregates trillions of tokens of data from the public internet."
+                    Unlock          2015
+                    DevTime         4
+                    CodeArt         1
+                    Level           1
+                    Server          1.0
+                    Submarkets      [ 2; 1; 1 ]
+                }
+                {
+                    Name            "RLHF Alignment"
+                    Description     "Reinforcement Learning from Human Feedback to prevent the AI from going rogue."
+                    Unlock          2020
+                    DevTime         5
+                    CodeArt         1
+                    Level           2
+                    Submarkets      [ 3; 0; 1 ]
+                }
+                {
+                    Name            "Multi-modal Processing"
+                    Description     "Allows the model to understand and generate text, images, and audio natively."
+                    Unlock          2023
+                    DevTime         6
+                    CodeArt         1
+                    Level           3
+                    Submarkets      [ 2; 3; 1 ]
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,176 @@
+SoftwareType
+{
+    Name            "Graphics Card (GPU)"
+    Description     "Dedicated processing for rendering and massive parallel logic."
+    Random          0.1
+    IdealPrice      350
+    OptimalDevTime  50
+    OneClient       False
+    InHouse         False
+    Popularity      0.8
+    Retention       180
+    Iterative       0.8
+    Hardware        True
+    Manufacturing
+    {
+        Components
+        [
+            {
+                Name            Plastic
+                BuiltInThumbnail Plastic
+                Price           5
+                Time            4
+            }
+        ]
+        Processes
+        [
+            {
+                Inputs          [ Plastic ]
+                Output          Final
+            }
+        ]
+        FinalTime       4
+    }
+    SubmarketNames  [ Rendering; VRAM; Cooling ]
+    NameGenerator   Software
+    Categories
+    [
+        {
+            Name            "Discrete Desktop GPU"
+            Description     "Massive graphics card for PCs."
+            Popularity      1.0
+            Retention       180
+            TimeScale       3
+            Iterative       0.85
+            Submarkets      [ 3; 2; 1 ]
+        }
+        {
+            Name            "Workstation GPU"
+            Description     "Enterprise-grade GPU for CAD and AI."
+            Unlock          2000
+            Popularity      0.5
+            Retention       240
+            TimeScale       4
+            Iterative       0.85
+            Submarkets      [ 2; 3; 0 ]
+        }
+    ]
+    Features
+    [
+        {
+            Name            "Graphics Processing"
+            Spec            Hardware
+            DevTime         5
+            CodeArt         1
+            Submarkets      [ 3; 1; 1 ]
+            Features
+            [
+                {
+                    Name            "Rasterization Cores"
+                    Description     "Basic 3D drawing capabilities."
+                    DevTime         5
+                    CodeArt         1
+                    Level           1
+                    Submarkets      [ 3; 0; 0 ]
+                }
+                {
+                    Name            "Ray-Tracing Cores"
+                    Description     "Advanced lighting simulation hardware."
+                    Unlock          2018
+                    DevTime         7
+                    CodeArt         1
+                    Level           3
+                    Submarkets      [ 3; 1; 0 ]
+                }
+                {
+                    Name            "GPU BIOS (VBIOS)"
+                    Description     "Firmware required to initialize the GPU."
+                    DevTime         3
+                    CodeArt         1
+                    Level           1
+                    FrameworkRequirement "BIOS / Firmware"
+                    Submarkets      [ 1; 1; 1 ]
+                }
+                {
+                    Name            "VRAM Modules"
+                    Description     "High speed memory dedicated to textures."
+                    DevTime         4
+                    CodeArt         1
+                    Level           1
+                    Submarkets      [ 2; 2; 0 ]
+                }
+                {
+                    Name            "Advanced Heatsink & Fans"
+                    Description     "Massive cooling solutions to prevent throttling."
+                    DevTime         3
+                    CodeArt         1
+                    Level           2
+                    Submarkets      [ 0; 0; 3 ]
+                }
+                {
+                    Name            "GDDR VRAM Speeds"
+                    Description     "Dedicated high-speed GDDR memory."
+                    Unlock          2000
+                    DevTime         4
+                    CodeArt         1
+                    Level           2
+                    Submarkets      [ 0; 2; 1 ]
+                }
+                {
+                    Name            "CUDA Cores"
+                    Description     "Massively parallel compute architecture."
+                    Unlock          2007
+                    DevTime         6
+                    CodeArt         1
+                    Level           3
+                    Submarkets      [ 0; 3; 2 ]
+                }
+            ]
+        }
+        {
+            Name            "Display Standards"
+            Spec            2D
+            DevTime         3
+            CodeArt         1
+            Submarkets      [ 1; 2; 0 ]
+            Features
+            [
+                {
+                    Name            "MDA / CGA / Hercules"
+                    Description     "Early monochrome and 4-color graphics."
+                    DevTime         2
+                    CodeArt         1
+                    Level           1
+                    Submarkets      [ 1; 0; 2 ]
+                }
+                {
+                    Name            "VGA / SVGA"
+                    Description     "Standard 256-color and high-res outputs."
+                    Unlock          1987
+                    DevTime         4
+                    CodeArt         1
+                    Level           2
+                    Submarkets      [ 2; 3; 0 ]
+                }
+                {
+                    Name            "DVI / HDMI"
+                    Description     "Digital video and audio signals."
+                    Unlock          1999
+                    DevTime         5
+                    CodeArt         1
+                    Level           2
+                    Submarkets      [ 2; 3; 0 ]
+                }
+                {
+                    Name            "DisplayPort"
+                    Description     "High bandwidth interface for multi-monitor and ultra-high refresh rates."
+                    Unlock          2006
+                    DevTime         6
+                    CodeArt         1
+                    Level           3
+                    Submarkets      [ 3; 3; 0 ]
+                }
+            ]
+        }
+    ]
+}

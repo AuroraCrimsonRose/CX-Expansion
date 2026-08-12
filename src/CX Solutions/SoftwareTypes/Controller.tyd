@@ -1,0 +1,155 @@
+SoftwareType
+{
+    Name            "Game Controller"
+    Description     "Advanced input devices for gaming and simulation."
+    Random          0.1
+    IdealPrice      60
+    OptimalDevTime  30
+    OneClient       False
+    InHouse         False
+    Popularity      0.9
+    Retention       240
+    Iterative       0.8
+    Hardware        True
+    Manufacturing
+    {
+        Components
+        [
+            {
+                Name            Plastic
+                BuiltInThumbnail Plastic
+                Price           5
+                Time            4
+            }
+        ]
+        Processes
+        [
+            {
+                Inputs          [ Plastic ]
+                Output          Final
+            }
+        ]
+        FinalTime       4
+    }
+    SubmarketNames  [ Ergonomics; Precision; Features ]
+    NameGenerator   Hardware
+    Categories
+    [
+        {
+            Name            "Classic Gamepad"
+            Description     "Basic wired controller with a D-Pad and face buttons."
+            Popularity      0.8
+            Retention       120
+            TimeScale       1
+            Iterative       0.85
+            Submarkets      [ 2; 1; 0 ]
+        }
+        {
+            Name            "Analog Controller"
+            Description     "Introduces analog sticks for 3D movement."
+            Unlock          1996
+            Popularity      1.0
+            Retention       180
+            TimeScale       2
+            Iterative       0.85
+            Submarkets      [ 1; 3; 1 ]
+        }
+        {
+            Name            "Wireless Gamepad"
+            Description     "Untethered gaming using internal batteries and RF/Bluetooth."
+            Unlock          2005
+            Popularity      1.0
+            Retention       240
+            TimeScale       2
+            Iterative       0.85
+            Submarkets      [ 2; 1; 2 ]
+        }
+        {
+            Name            "Pro/Elite Controller"
+            Description     "High-end controller with rear paddles, trigger stops, and premium materials."
+            Unlock          2015
+            Popularity      0.6
+            Retention       360
+            TimeScale       3
+            Iterative       0.85
+            Submarkets      [ 1; 3; 3 ]
+        }
+        {
+            Name            "Arcade Fight Stick"
+            Description     "Heavy-duty microswitches and a large joystick for fighting games."
+            Popularity      0.3
+            Retention       360
+            TimeScale       2
+            Iterative       0.85
+            Submarkets      [ 0; 3; 1 ]
+        }
+        {
+            Name            "VR Motion Controller"
+            Description     "Tracks hand movement in 3D space with high-precision gyros."
+            Unlock          2016
+            Popularity      0.5
+            Retention       240
+            TimeScale       4
+            Iterative       0.85
+            Submarkets      [ 2; 2; 3 ]
+        }
+    ]
+    Features
+    [
+        {
+            Name            "Directional Inputs"
+            Spec            Hardware
+            DevTime         3
+            CodeArt         1
+            Submarkets      [ 0; 3; 0 ]
+            Features
+            [
+                {
+                    Name            "Standard Thumbsticks"
+                    Description     "Potentiometer-based analog sticks. Prone to stick drift over time."
+                    Unlock          1996
+                    DevTime         3
+                    CodeArt         1
+                    Level           1
+                    Submarkets      [ 0; 2; 0 ]
+                }
+                {
+                    Name            "Hall Effect Sensors"
+                    Description     "Magnetic sensors that completely eliminate stick drift and increase precision."
+                    Unlock          2018
+                    DevTime         5
+                    CodeArt         1
+                    Level           2
+                    Submarkets      [ 0; 3; 2 ]
+                }
+                {
+                    Name            "Rumble Motors"
+                    Description     "Asymmetrical spinning weights for basic vibration."
+                    Unlock          1997
+                    DevTime         2
+                    CodeArt         1
+                    Level           1
+                    Submarkets      [ 1; 0; 1 ]
+                }
+                {
+                    Name            "HD Linear Actuators"
+                    Description     "Precise haptics that can simulate textures like walking on ice or sand."
+                    Unlock          2017
+                    DevTime         5
+                    CodeArt         1
+                    Level           2
+                    Submarkets      [ 2; 0; 2 ]
+                }
+                {
+                    Name            "Force Feedback Triggers"
+                    Description     "Triggers that can dynamically adjust their tension and resistance."
+                    Unlock          2020
+                    DevTime         6
+                    CodeArt         1
+                    Level           3
+                    Submarkets      [ 1; 0; 3 ]
+                }
+            ]
+        }
+    ]
+}

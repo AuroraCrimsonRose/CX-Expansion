@@ -1,0 +1,15 @@
+CompanyType
+{
+    Specialization      "Database Systems"
+    PerYear             0.1
+    Min                 1
+    Max                 6
+    Frameworks          True
+    Types
+    [
+        {
+            Software    "Database Software"
+            Chance      1
+        }
+    ]
+}

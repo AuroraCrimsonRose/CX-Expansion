@@ -1,0 +1,349 @@
+SoftwareType
+{
+    Name            "Game"
+    Description     "Interactive entertainment software. Advanced Level 2 & 3 features require licensing a Game Engine framework!"
+    Random          0.15
+    IdealPrice      60
+    OptimalDevTime  30
+    OneClient       False
+    InHouse         False
+    Popularity      1.0
+    Retention       36
+    Iterative       0.85
+    SubmarketNames  [ Gameplay; Graphics; Story ]
+    NameGenerator   Game
+    Categories
+    [
+        {
+            Name            "Action"
+            Description     "Tests reflexes, hand-eye coordination, and timing through combat or movement challenges."
+            Popularity      1.0
+            Retention       36
+            TimeScale       1
+            Iterative       0.85
+            Submarkets      [ 2; 1; 0 ]
+        }
+        {
+            Name            "Adventure"
+            Description     "Emphasizes story, environmental exploration, item gathering, and puzzle-solving."
+            Popularity      0.8
+            Retention       48
+            TimeScale       2
+            Iterative       0.85
+            Submarkets      [ 0; 1; 3 ]
+        }
+        {
+            Name            "Action-Adventure"
+            Description     "Hybrids that balance physical combat mechanics with deep exploration and story progression."
+            Popularity      0.9
+            Retention       48
+            TimeScale       2
+            Iterative       0.85
+            Submarkets      [ 2; 1; 2 ]
+        }
+        {
+            Name            "Role-Playing (RPG)"
+            Description     "Focuses on narrative choices, character customisation, stat progression, and tactical combat."
+            Popularity      0.9
+            Retention       60
+            TimeScale       3
+            Iterative       0.85
+            Submarkets      [ 1; 1; 3 ]
+        }
+        {
+            Name            "Strategy"
+            Description     "Requires resource management, tactical planning, and map control to defeat opponents."
+            Unlock          1980
+            Popularity      0.8
+            Retention       60
+            TimeScale       2
+            Iterative       0.85
+            Submarkets      [ 3; 0; 1 ]
+        }
+        {
+            Name            "Simulation"
+            Description     "Mimics real-world activities, systems, or careers with realistic rules and physics."
+            Unlock          1985
+            Popularity      0.7
+            Retention       48
+            TimeScale       2
+            Iterative       0.85
+            Submarkets      [ 3; 1; 0 ]
+        }
+        {
+            Name            "Sports & Racing"
+            Description     "Recreates athletic competitions or vehicular racing events, both arcade and realistic."
+            Popularity      0.8
+            Retention       36
+            TimeScale       1
+            Iterative       0.85
+            Submarkets      [ 1; 2; 0 ]
+        }
+        {
+            Name            "Puzzle"
+            Description     "Challenges logic, pattern recognition, and conceptual problem-solving without a reliance on combat."
+            Popularity      0.7
+            Retention       36
+            TimeScale       1
+            Iterative       0.85
+            Submarkets      [ 3; 0; 0 ]
+        }
+        {
+            Name            "MMORPG"
+            Description     "Massive multiplayer online worlds. (Heavy network load)"
+            Unlock          1997
+            Popularity      1.0
+            Retention       72
+            TimeScale       3
+            Iterative       0.85
+            Submarkets      [ 2; 1; 2 ]
+        }
+        {
+            Name            "Survival / Crafting"
+            Description     "Procedural generation and resource gathering."
+            Unlock          2009
+            Popularity      0.9
+            Retention       60
+            TimeScale       2
+            Iterative       0.85
+            Submarkets      [ 2; 1; 1 ]
+        }
+    ]
+    Features
+    [
+        {
+            Name            "Graphics & Rendering"
+            Spec            2D
+            DevTime         4
+            CodeArt         0.3
+            Submarkets      [ 0; 3; 0 ]
+            Features
+            [
+                {
+                    Name            "2D Sprites"
+                    Description     "Basic flat character rendering."
+                    DevTime         3
+                    CodeArt         0.2
+                    Level           1
+                    Submarkets      [ 0; 2; 0 ]
+                }
+                {
+                    Name            "3D Polygons"
+                    Description     "True 3D graphics in a virtual space."
+                    Unlock          1992
+                    DevTime         6
+                    CodeArt         0.5
+                    Level           2
+                    FrameworkRequirement "Game Engine"
+                    Submarkets      [ 0; 3; 0 ]
+                }
+                {
+                    Name            "Ray Tracing"
+                    Description     "Hyper-realistic lighting simulation."
+                    Unlock          2018
+                    DevTime         8
+                    CodeArt         0.8
+                    Level           3
+                    FrameworkRequirement "Game Engine"
+                    Submarkets      [ 0; 3; 0 ]
+                }
+            ]
+        }
+        {
+            Name            "Physics & Simulation"
+            Spec            System
+            DevTime         4
+            CodeArt         1
+            Submarkets      [ 2; 0; 1 ]
+            Features
+            [
+                {
+                    Name            "Basic Physics"
+                    Description     "Simple collision and gravity."
+                    DevTime         3
+                    CodeArt         1
+                    Level           1
+                    Submarkets      [ 2; 0; 0 ]
+                }
+                {
+                    Name            "Advanced Physics"
+                    Description     "Ragdolls, fluid dynamics, and rigid bodies."
+                    Unlock          1998
+                    DevTime         5
+                    CodeArt         1
+                    Level           2
+                    FrameworkRequirement "Game Engine"
+                    Submarkets      [ 3; 0; 0 ]
+                }
+                {
+                    Name            "Basic AI"
+                    Description     "Simple pathfinding and state machines."
+                    DevTime         3
+                    CodeArt         1
+                    Level           1
+                    Submarkets      [ 2; 0; 0 ]
+                }
+                {
+                    Name            "Advanced AI"
+                    Description     "Complex decision trees and dynamic behavior."
+                    Unlock          1995
+                    DevTime         6
+                    CodeArt         1
+                    Level           2
+                    FrameworkRequirement "Game Engine"
+                    Submarkets      [ 2; 0; 1 ]
+                }
+                {
+                    Name            "Branching Story"
+                    Description     "Multiple narrative paths based on player choices."
+                    DevTime         4
+                    CodeArt         0.8
+                    Level           1
+                    Submarkets      [ 0; 0; 3 ]
+                }
+                {
+                    Name            "Open World"
+                    Description     "Massive seamless environments."
+                    Unlock          2001
+                    DevTime         8
+                    CodeArt         0.6
+                    Level           2
+                    FrameworkRequirement "Game Engine"
+                    Submarkets      [ 3; 1; 1 ]
+                }
+                {
+                    Name            "Controller Support"
+                    Description     "Playable with gamepads and joysticks."
+                    DevTime         2
+                    CodeArt         1
+                    Level           1
+                    Submarkets      [ 2; 0; 0 ]
+                }
+                {
+                    Name            "Mod Support"
+                    Description     "Allows players to create and share custom content."
+                    Unlock          1993
+                    DevTime         5
+                    CodeArt         1
+                    Level           2
+                    FrameworkRequirement "Game Engine"
+                    Submarkets      [ 2; 0; 0 ]
+                }
+                {
+                    Name            "VR Support"
+                    Description     "Full virtual reality integration."
+                    Unlock          2016
+                    DevTime         6
+                    CodeArt         1
+                    Level           3
+                    FrameworkRequirement "Game Engine"
+                    Submarkets      [ 1; 2; 0 ]
+                }
+                {
+                    Name            "Save System"
+                    Description     "Basic local progress saving."
+                    DevTime         2
+                    CodeArt         1
+                    Level           1
+                    Submarkets      [ 1; 0; 1 ]
+                }
+                {
+                    Name            "DRM / Anti-Piracy"
+                    Description     "Prevents unauthorized copies of the game."
+                    Unlock          2004
+                    DevTime         4
+                    CodeArt         1
+                    Level           2
+                    FrameworkRequirement "Game Engine"
+                    Submarkets      [ 2; 0; 0 ]
+                }
+                {
+                    Name            "Anti-Cheat Software"
+                    Description     "Kernel-level protection against hackers."
+                    Unlock          2008
+                    DevTime         5
+                    CodeArt         1
+                    Level           3
+                    FrameworkRequirement "Game Engine"
+                    Submarkets      [ 2; 0; 1 ]
+                }
+            ]
+        }
+        {
+            Name            "Networking & Multiplayer"
+            Spec            Network
+            DevTime         4
+            CodeArt         1
+            Submarkets      [ 2; 0; 0 ]
+            Features
+            [
+                {
+                    Name            "Local Co-Op"
+                    Description     "Split-screen or same-keyboard multiplayer."
+                    DevTime         3
+                    CodeArt         1
+                    Level           1
+                    Submarkets      [ 2; 0; 0 ]
+                }
+                {
+                    Name            "LAN Support"
+                    Description     "Connect with other computers on a local network."
+                    Unlock          1990
+                    DevTime         4
+                    CodeArt         1
+                    Level           1
+                    Submarkets      [ 2; 0; 0 ]
+                }
+                {
+                    Name            "Matchmaking Servers"
+                    Description     "Global online matchmaking and leaderboards."
+                    Unlock          2000
+                    DevTime         6
+                    CodeArt         1
+                    Level           2
+                    FrameworkRequirement "Game Engine"
+                    Submarkets      [ 3; 0; 0 ]
+                    Server          0.0001
+                }
+                {
+                    Name            "Battle Royale Mode"
+                    Description     "Massive 100-player last-man-standing game loop."
+                    Unlock          2017
+                    DevTime         6
+                    CodeArt         1
+                    Level           3
+                    FrameworkRequirement "Game Engine"
+                    Submarkets      [ 1; 2; 0 ]
+                    Server          0.0003
+                }
+            ]
+        }
+        {
+            Name            "Audio"
+            Spec            Audio
+            DevTime         3
+            CodeArt         0.1
+            Submarkets      [ 1; 0; 1 ]
+            Features
+            [
+                {
+                    Name            "Basic Audio"
+                    Description     "Mono sound effects and simple music."
+                    DevTime         2
+                    CodeArt         0.1
+                    Level           1
+                    Submarkets      [ 1; 0; 1 ]
+                }
+                {
+                    Name            "Advanced Audio"
+                    Description     "Surround sound and dynamic mixing."
+                    Unlock          1992
+                    DevTime         4
+                    CodeArt         0.1
+                    Level           2
+                    Submarkets      [ 2; 0; 2 ]
+                }
+            ]
+        }
+    ]
+}

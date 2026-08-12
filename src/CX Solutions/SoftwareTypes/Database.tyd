@@ -1,0 +1,255 @@
+SoftwareType
+{
+    Name            "Database Software"
+    Description     "A structured set of data held in a computer, especially one that is accessible in various ways."
+    Unlock          1974
+    Random          0.10
+    IdealPrice      150
+    OptimalDevTime  36
+    OneClient       False
+    InHouse         False
+    Popularity      0.8
+    Retention       50
+    Iterative       0.60
+    SubmarketNames  [ Functionality; Performance; Security ]
+    NameGenerator   Database
+    Features
+    [
+        {
+            Name            "Interface"
+            Spec            2D
+            DevTime         4
+            CodeArt         0.1
+            Submarkets      [ 1; 1; 0 ]
+            Features
+            [
+                {
+                    Name            "Command Line Shell"
+                    Description     "Basic terminal interaction for writing queries."
+                    DevTime         2
+                    CodeArt         0.2
+                    Level           1
+                    Submarkets      [ 1; 1; 0 ]
+                }
+                {
+                    Name            "Query Builder GUI"
+                    Description     "Visual tools to help construct complex queries without memorizing syntax."
+                    Unlock          1985
+                    DevTime         4
+                    CodeArt         0.5
+                    Level           2
+                    Submarkets      [ 1; 0; 0 ]
+                }
+                {
+                    Name            "Administration Dashboard"
+                    Description     "A comprehensive GUI to manage users, tables, and server health."
+                    Unlock          1995
+                    DevTime         5
+                    CodeArt         0.8
+                    Level           3
+                    Submarkets      [ 1; 1; 1 ]
+                }
+                {
+                    Name            "Data Visualization"
+                    Description     "Built-in charting and graphing for quick data insights."
+                    Unlock          2005
+                    DevTime         6
+                    CodeArt         1
+                    Level           3
+                    Submarkets      [ 2; 0; 0 ]
+                }
+            ]
+        }
+        {
+            Name            "System"
+            Spec            System
+            DevTime         8
+            CodeArt         1
+            Submarkets      [ 2; 1; 0 ]
+            Features
+            [
+                {
+                    Name            "Relational Engine"
+                    Description     "The core storage engine utilizing a relational model."
+                    DevTime         6
+                    CodeArt         1
+                    Level           1
+                    Submarkets      [ 2; 1; 0 ]
+                }
+                {
+                    Name            "ACID Transactions"
+                    Description     "Atomicity, Consistency, Isolation, and Durability."
+                    Unlock          1980
+                    DevTime         5
+                    CodeArt         1
+                    Level           2
+                    Submarkets      [ 0; 1; 2 ]
+                }
+                {
+                    Name            "Stored Procedures"
+                    Description     "Compiled subroutines stored in the database for performance."
+                    Unlock          1985
+                    DevTime         4
+                    CodeArt         1
+                    Level           2
+                    Submarkets      [ 1; 1; 0 ]
+                }
+                {
+                    Name            "Advanced Indexing"
+                    Description     "B-trees and hash indexes for lightning fast data retrieval."
+                    Unlock          1980
+                    DevTime         5
+                    CodeArt         1
+                    Level           2
+                    Submarkets      [ 0; 3; 0 ]
+                }
+                {
+                    Name            "NoSQL Support"
+                    Description     "Document and key-value store capabilities alongside relational data."
+                    Unlock          2009
+                    DevTime         7
+                    CodeArt         1
+                    Level           3
+                    Submarkets      [ 2; 1; 0 ]
+                }
+                {
+                    Name            "In-Memory Processing"
+                    Description     "Storing working data in RAM for extreme performance."
+                    Unlock          2010
+                    DevTime         8
+                    CodeArt         1
+                    Level           3
+                    Submarkets      [ 0; 3; 0 ]
+                }
+                {
+                    Name            "Multi-Version Concurrency Control"
+                    Description     "MVCC allows safe concurrent access without locking the whole database."
+                    Unlock          1985
+                    DevTime         6
+                    CodeArt         1
+                    Level           2
+                    Submarkets      [ 0; 2; 1 ]
+                }
+                {
+                    Name            "Triggers & Events"
+                    Description     "Automate actions directly inside the database on specific events."
+                    Unlock          1990
+                    DevTime         3
+                    CodeArt         1
+                    Level           1
+                    Submarkets      [ 1; 1; 0 ]
+                }
+                {
+                    Name            "Views & Materialized Views"
+                    Description     "Pre-computed query results that act like tables for performance."
+                    Unlock          1993
+                    DevTime         4
+                    CodeArt         1
+                    Level           2
+                    Submarkets      [ 1; 2; 0 ]
+                }
+                {
+                    Name            "Plugin Ecosystem"
+                    Description     "Extensible architecture allowing users to load custom modules (e.g. spatial data)."
+                    Unlock          1995
+                    DevTime         6
+                    CodeArt         1
+                    Level           2
+                    Submarkets      [ 2; 0; 0 ]
+                }
+                {
+                    Name            "Full-Text Search"
+                    Description     "Advanced text indexing and searching capabilities natively."
+                    Unlock          2000
+                    DevTime         5
+                    CodeArt         1
+                    Level           2
+                    Submarkets      [ 2; 1; 0 ]
+                }
+            ]
+        }
+        {
+            Name            "Network"
+            Spec            Network
+            DevTime         5
+            CodeArt         1
+            Optional        True
+            Submarkets      [ 0; 1; 2 ]
+            Features
+            [
+                {
+                    Name            "Client-Server Architecture"
+                    Description     "Allows remote clients to connect and query the database over a network."
+                    Unlock          1985
+                    DevTime         4
+                    CodeArt         1
+                    Level           1
+                    Submarkets      [ 1; 1; 0 ]
+                }
+                {
+                    Name            "Database Replication"
+                    Description     "Copying data across multiple servers for redundancy."
+                    Unlock          1995
+                    DevTime         6
+                    CodeArt         1
+                    Level           2
+                    Submarkets      [ 0; 1; 2 ]
+                }
+                {
+                    Name            "Distributed Sharding"
+                    Description     "Horizontally partitioning data across multiple machines."
+                    Unlock          2005
+                    DevTime         7
+                    CodeArt         1
+                    Level           3
+                    Submarkets      [ 0; 3; 0 ]
+                }
+                {
+                    Name            "Cloud Backups"
+                    Description     "Automatic off-site backups for disaster recovery."
+                    Unlock          2010
+                    DevTime         5
+                    CodeArt         1
+                    Level           2
+                    Submarkets      [ 0; 0; 3 ]
+                }
+                {
+                    Name            "End-to-End Encryption"
+                    Description     "Encrypting data in transit and at rest."
+                    Unlock          2000
+                    DevTime         6
+                    CodeArt         1
+                    Level           2
+                    Submarkets      [ 0; 0; 3 ]
+                }
+                {
+                    Name            "High Availability Failover"
+                    Description     "Automatic switching to a standby server if the primary fails."
+                    Unlock          2000
+                    DevTime         6
+                    CodeArt         1
+                    Level           3
+                    Submarkets      [ 0; 1; 2 ]
+                }
+                {
+                    Name            "Foreign Data Wrappers"
+                    Description     "Allows querying external data sources seamlessly as if they were local tables."
+                    Unlock          2003
+                    DevTime         5
+                    CodeArt         1
+                    Level           3
+                    Submarkets      [ 2; 0; 0 ]
+                }
+                {
+                    Name            "Multi-Master Replication"
+                    Description     "Active-active clustering where multiple nodes can safely process writes."
+                    Unlock          2007
+                    DevTime         8
+                    CodeArt         1
+                    Level           3
+                    Submarkets      [ 0; 3; 0 ]
+                }
+            ]
+        }
+    ]
+}

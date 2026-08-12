@@ -1,0 +1,90 @@
+SoftwareType
+{
+    Name            "ROM Chip"
+    Description     "Read-Only Memory chip used to store BIOS and Firmware on motherboards."
+    Random          0.1
+    IdealPrice      15
+    OptimalDevTime  15
+    OneClient       False
+    InHouse         False
+    Popularity      1.0
+    Retention       240
+    Iterative       0.8
+    Hardware        True
+    Manufacturing
+    {
+        Components
+        [
+            {
+                Name            Plastic
+                BuiltInThumbnail Plastic
+                Price           5
+                Time            4
+            }
+        ]
+        Processes
+        [
+            {
+                Inputs          [ Plastic ]
+                Output          Final
+            }
+        ]
+        FinalTime       4
+    }
+    SubmarketNames  [ Capacity; Reliability; Speed ]
+    NameGenerator   Hardware
+    Categories
+    [
+        {
+            Name            "DIP ROM"
+            Description     "Dual In-line Package. Traditional socketed BIOS chip."
+            Popularity      0.8
+            Retention       120
+            TimeScale       1
+            Iterative       0.85
+            Submarkets      [ 1; 3; 0 ]
+        }
+        {
+            Name            "EEPROM"
+            Description     "Electrically Erasable. Allows for BIOS flashing/updating without replacing the chip."
+            Unlock          1990
+            Popularity      1.0
+            Retention       180
+            TimeScale       2
+            Iterative       0.85
+            Submarkets      [ 3; 2; 1 ]
+        }
+        {
+            Name            "SPI Flash"
+            Description     "Modern, high-capacity, and extremely fast flash memory chip."
+            Unlock          2006
+            Popularity      1.0
+            Retention       240
+            TimeScale       2
+            Iterative       0.85
+            Submarkets      [ 2; 1; 3 ]
+        }
+    ]
+    Features
+    [
+        {
+            Name            "Chip Features"
+            Spec            Hardware
+            DevTime         2
+            CodeArt         1
+            Submarkets      [ 1; 2; 0 ]
+            Features
+            [
+                {
+                    Name            "Dual BIOS Support"
+                    Description     "Backup ROM chip space in case of bad flashing."
+                    Unlock          1999
+                    DevTime         3
+                    CodeArt         1
+                    Level           2
+                    Submarkets      [ 0; 3; 0 ]
+                }
+            ]
+        }
+    ]
+}

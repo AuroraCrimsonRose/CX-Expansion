@@ -1,0 +1,80 @@
+SoftwareType
+{
+    Name            "VR Headset"
+    Description     "Virtual Reality Head-Mounted Displays (HMD)."
+    Random          0.1
+    IdealPrice      500
+    OptimalDevTime  60
+    OneClient       False
+    InHouse         False
+    Popularity      0.4
+    Retention       240
+    Iterative       0.7
+    Hardware        True
+    Manufacturing
+    {
+        Components
+        [
+            {
+                Name            Plastic
+                BuiltInThumbnail Plastic
+                Price           5
+                Time            4
+            }
+        ]
+        Processes
+        [
+            {
+                Inputs          [ Plastic ]
+                Output          Final
+            }
+        ]
+        FinalTime       4
+    }
+    SubmarketNames  [ Immersion; Comfort; Tracking ]
+    NameGenerator   Hardware
+    Categories
+    [
+        {
+            Name            "Tethered PC VR"
+            Description     "Plugs directly into a powerful PC. Requires external tracking stations."
+            Unlock          2016
+            Popularity      0.8
+            Retention       240
+            TimeScale       3
+            Iterative       0.85
+            Submarkets      [ 3; 1; 2 ]
+        }
+    ]
+    Features
+    [
+        {
+            Name            "Tracking Tech"
+            Spec            Hardware
+            DevTime         5
+            CodeArt         1
+            Submarkets      [ 2; 0; 3 ]
+            Features
+            [
+                {
+                    Name            "Inside-Out Tracking"
+                    Description     "Uses built-in cameras to track the room, no base stations needed."
+                    Unlock          2019
+                    DevTime         5
+                    CodeArt         1
+                    Level           1
+                    Submarkets      [ 1; 2; 3 ]
+                }
+                {
+                    Name            "Eye & Face Tracking"
+                    Description     "Tracks pupil movement for foveated rendering and social expression."
+                    Unlock          2023
+                    DevTime         6
+                    CodeArt         1
+                    Level           2
+                    Submarkets      [ 3; 0; 2 ]
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,31 @@
+CompanyType
+{
+	Specialization		"SaaS Provider"
+	PerYear				0.3
+	Min					3
+	Max					12
+    Frameworks          False
+	Types
+		[
+			{
+			Software	"Communication App"
+			Chance		1
+			Force		False
+			}
+			{
+			Software	"Payment Gateway"
+			Chance		0.8
+			Force		False
+			}
+			{
+			Software	"Cloud Storage"
+			Chance		1
+			Force		False
+			}
+			{
+			Software	"Streaming Platform"
+			Chance		1
+			Force		False
+			}
+		]
+}

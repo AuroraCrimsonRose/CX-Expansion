@@ -1,0 +1,103 @@
+SoftwareType
+{
+    Name            "Computational Software"
+    Description     "Advanced software for mathematics, engineering, and data modeling."
+    Random          0.1
+    IdealPrice      250
+    OptimalDevTime  55
+    OneClient       False
+    InHouse         False
+    Popularity      0.5
+    Retention       240
+    Iterative       0.8
+    Hardware        False
+    SubmarketNames  [ Mathematics; Simulation; Visualization ]
+    NameGenerator   Software
+    Categories
+    [
+        {
+            Name            "Symbolic Math"
+            Description     "Software like Mathematica for algebraic equations."
+            Popularity      0.8
+            Retention       180
+            TimeScale       2
+            Iterative       0.85
+            Submarkets      [ 3; 0; 0 ]
+        }
+        {
+            Name            "Numeric Computing"
+            Description     "Software like MATLAB for matrix manipulation."
+            Popularity      0.9
+            Retention       240
+            TimeScale       3
+            Iterative       0.85
+            Submarkets      [ 2; 1; 1 ]
+        }
+        {
+            Name            "Simulation Environment"
+            Description     "Physics and system-level modeling."
+            Popularity      0.7
+            Retention       360
+            TimeScale       3
+            Iterative       0.85
+            Submarkets      [ 1; 3; 0 ]
+        }
+    ]
+    Features
+    [
+        {
+            Name            "Core Engine"
+            Spec            System
+            DevTime         5
+            CodeArt         1
+            Submarkets      [ 2; 2; 0 ]
+            Features
+            [
+                {
+                    Name            "Linear Algebra Toolkit"
+                    Description     "Highly optimized matrix routines."
+                    DevTime         4
+                    CodeArt         1
+                    Level           1
+                    Submarkets      [ 3; 0; 0 ]
+                }
+                {
+                    Name            "Physics Solver"
+                    Description     "Finite element analysis and thermodynamics."
+                    Unlock          1995
+                    DevTime         6
+                    CodeArt         1
+                    Level           2
+                    Submarkets      [ 0; 3; 0 ]
+                }
+            ]
+        }
+        {
+            Name            "Data Representation"
+            Spec            2D
+            DevTime         3
+            CodeArt         0.8
+            Submarkets      [ 0; 0; 3 ]
+            Features
+            [
+                {
+                    Name            "2D Plotting"
+                    Description     "Basic charts and graphs."
+                    DevTime         2
+                    CodeArt         0.7
+                    Level           1
+                    Submarkets      [ 0; 0; 2 ]
+                }
+                {
+                    Name            "3D Surface Rendering"
+                    Description     "Advanced 3D data visualization."
+                    Unlock          2000
+                    DevTime         4
+                    CodeArt         0.5
+                    Level           2
+                    Submarkets      [ 0; 0; 3 ]
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,134 @@
+SoftwareType
+{
+    Name            "Payment Gateway"
+    Description     "Financial infrastructure software for processing e-commerce and POS transactions."
+    Random          0.1
+    IdealPrice      150
+    OptimalDevTime  60
+    OneClient       False
+    InHouse         False
+    Popularity      0.9
+    Retention       360
+    Iterative       0.9
+    Hardware        False
+    SubmarketNames  [ Security; E-Commerce; Retail ]
+    NameGenerator   Software
+    Categories
+    [
+        {
+            Name            "Online Checkout Portal"
+            Description     "A web-based service for processing consumer payments (e.g., PayPal)."
+            Unlock          1998
+            Popularity      1.0
+            Retention       360
+            TimeScale       3
+            Iterative       0.85
+            Submarkets      [ 2; 3; 0 ]
+        }
+        {
+            Name            "Merchant API Gateway"
+            Description     "Developer-focused payment APIs for seamless integration (e.g., Stripe)."
+            Unlock          2010
+            Popularity      0.8
+            Retention       360
+            TimeScale       4
+            Iterative       0.85
+            Submarkets      [ 2; 3; 1 ]
+        }
+        {
+            Name            "Point of Sale (POS) System"
+            Description     "Software and physical terminals for retail storefronts (e.g., Square)."
+            Unlock          2009
+            Popularity      0.8
+            Retention       360
+            TimeScale       4
+            Iterative       0.85
+            Submarkets      [ 2; 0; 3 ]
+        }
+        {
+            Name            "Mobile Wallet"
+            Description     "NFC-based smartphone payment systems (e.g., Apple Pay)."
+            Unlock          2014
+            Popularity      1.0
+            Retention       240
+            TimeScale       3
+            Iterative       0.85
+            Submarkets      [ 3; 1; 2 ]
+        }
+    ]
+    Features
+    [
+        {
+            Name            "Transaction Processing"
+            Spec            Network
+            DevTime         4
+            CodeArt         1
+            Submarkets      [ 0; 2; 2 ]
+            Features
+            [
+                {
+                    Name            "Credit Card Processing"
+                    Description     "Core logic for communicating with major banking networks."
+                    DevTime         4
+                    CodeArt         1
+                    Level           1
+                    Submarkets      [ 0; 2; 2 ]
+                }
+                {
+                    Name            "Fraud Detection Algorithm"
+                    Description     "Machine learning heuristics to block suspicious transactions."
+                    Unlock          2005
+                    DevTime         5
+                    CodeArt         1
+                    Level           2
+                    Submarkets      [ 3; 1; 1 ]
+                }
+                {
+                    Name            "Currency Conversion"
+                    Description     "Real-time exchange rates for global markets."
+                    Unlock          2002
+                    DevTime         3
+                    CodeArt         1
+                    Level           2
+                    Submarkets      [ 0; 3; 1 ]
+                }
+            ]
+        }
+        {
+            Name            "Financial Security"
+            Spec            System
+            DevTime         5
+            CodeArt         1
+            Submarkets      [ 3; 1; 1 ]
+            Features
+            [
+                {
+                    Name            "Data Encryption & PCI Compliance"
+                    Description     "Mandatory standard for securely handling cardholder data."
+                    DevTime         4
+                    CodeArt         1
+                    Level           1
+                    Submarkets      [ 3; 1; 1 ]
+                }
+                {
+                    Name            "Tokenization"
+                    Description     "Replaces sensitive data with unique symbols, minimizing breach risks."
+                    Unlock          2011
+                    DevTime         5
+                    CodeArt         1
+                    Level           2
+                    Submarkets      [ 3; 2; 1 ]
+                }
+                {
+                    Name            "Biometric Authentication"
+                    Description     "Fingerprint and FaceID confirmation for Mobile Wallets."
+                    Unlock          2014
+                    DevTime         4
+                    CodeArt         1
+                    Level           3
+                    Submarkets      [ 3; 0; 1 ]
+                }
+            ]
+        }
+    ]
+}

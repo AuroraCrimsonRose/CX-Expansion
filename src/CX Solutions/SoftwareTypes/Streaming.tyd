@@ -1,0 +1,118 @@
+SoftwareType
+{
+    Name            "Streaming Platform"
+    Description     "Content delivery services for music, movies, and live broadcasting."
+    Random          0.1
+    IdealPrice      100
+    OptimalDevTime  60
+    OneClient       False
+    InHouse         False
+    Popularity      1.0
+    Retention       360
+    Iterative       0.9
+    Hardware        False
+    SubmarketNames  [ Video Quality; Content Discovery; Social ]
+    NameGenerator   Software
+    Categories
+    [
+        {
+            Name            "Music Streaming"
+            Description     "On-demand audio libraries (e.g., Spotify/Apple Music)."
+            Unlock          2006
+            Popularity      1.0
+            Retention       360
+            TimeScale       3
+            Iterative       0.85
+            Submarkets      [ 1; 3; 2 ]
+        }
+        {
+            Name            "Video On-Demand (VOD)"
+            Description     "Subscription movie and TV show streaming (e.g., Netflix)."
+            Unlock          2007
+            Popularity      1.0
+            Retention       360
+            TimeScale       4
+            Iterative       0.85
+            Submarkets      [ 3; 3; 1 ]
+        }
+        {
+            Name            "Live Broadcasting"
+            Description     "Real-time video streaming with chat interactions (e.g., Twitch)."
+            Unlock          2011
+            Popularity      0.9
+            Retention       360
+            TimeScale       5
+            Iterative       0.85
+            Submarkets      [ 3; 1; 3 ]
+        }
+    ]
+    Features
+    [
+        {
+            Name            "Delivery Infrastructure"
+            Spec            Network
+            DevTime         5
+            CodeArt         1
+            Submarkets      [ 3; 0; 0 ]
+            Features
+            [
+                {
+                    Name            "Adaptive Bitrate Streaming"
+                    Description     "Dynamically adjusts video quality based on the user's internet speed."
+                    Unlock          2008
+                    DevTime         5
+                    CodeArt         1
+                    Level           1
+                    Submarkets      [ 3; 0; 0 ]
+                }
+                {
+                    Name            "Offline Downloads"
+                    Description     "Allows users to temporarily save DRM-encrypted content to their device."
+                    Unlock          2015
+                    DevTime         4
+                    CodeArt         1
+                    Level           2
+                    Submarkets      [ 1; 1; 0 ]
+                }
+                {
+                    Name            "4K HDR / Lossless Audio"
+                    Description     "Ultra-premium quality tiers requiring massive server bandwidth."
+                    Unlock          2016
+                    DevTime         6
+                    CodeArt         1
+                    Level           3
+                    Server          2.0
+                    Submarkets      [ 3; 0; 0 ]
+                }
+            ]
+        }
+        {
+            Name            "Platform Experience"
+            Spec            System
+            DevTime         4
+            CodeArt         1
+            Submarkets      [ 0; 3; 3 ]
+            Features
+            [
+                {
+                    Name            "Machine Learning Recommendations"
+                    Description     "An algorithm that learns user habits to suggest the next binge."
+                    Unlock          2010
+                    DevTime         6
+                    CodeArt         1
+                    Level           2
+                    Submarkets      [ 0; 3; 0 ]
+                }
+                {
+                    Name            "Global Chat & Emotes"
+                    Description     "Real-time chatrooms for live broadcasting."
+                    Unlock          2011
+                    DevTime         4
+                    CodeArt         1
+                    Level           1
+                    Submarkets      [ 0; 0; 3 ]
+                }
+            ]
+        }
+    ]
+}

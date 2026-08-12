@@ -1,0 +1,36 @@
+CompanyType
+{
+	Specialization		"Peripheral Maker"
+	PerYear				0.2
+	Min					3
+	Max					8
+    Frameworks          False
+	Types
+		[
+			{
+			Software	"Game Controller"
+			Chance		1
+			Force		False
+			}
+			{
+			Software	"Computer Monitor"
+			Chance		1
+			Force		False
+			}
+			{
+			Software	"Keyboard"
+			Chance		1
+			Force		False
+			}
+			{
+			Software	"Computer Mouse"
+			Chance		1
+			Force		False
+			}
+			{
+			Software	"VR Headset"
+			Chance		0.5
+			Force		False
+			}
+		]
+}

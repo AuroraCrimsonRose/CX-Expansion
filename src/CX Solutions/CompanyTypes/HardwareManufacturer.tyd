@@ -1,0 +1,46 @@
+CompanyType
+{
+	Specialization		"Hardware Manufacturing"
+	PerYear				0.15
+	Min					4
+	Max					10
+    Frameworks          False
+	Types
+		[
+			{
+			Software	"Data Storage"
+			Chance		1
+			Force		False
+			}
+			{
+			Software	"Power Supply (PSU)"
+			Chance		1
+			Force		False
+			}
+			{
+			Software	"Battery"
+			Chance		0.8
+			Force		False
+			}
+			{
+			Software	"Wireless Antenna"
+			Chance		0.8
+			Force		False
+			}
+			{
+			Software	"Device Case"
+			Chance		1
+			Force		False
+			}
+			{
+			Software	"Expansion Card"
+			Chance		1
+			Force		False
+			}
+			{
+			Software	"Display Panel"
+			Chance		1
+			Force		False
+			}
+		]
+}

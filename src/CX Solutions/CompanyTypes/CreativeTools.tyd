@@ -1,0 +1,22 @@
+CompanyType
+{
+    Specialization      "Creative tools"
+    PerYear             0.2
+    Min                 4
+    Max                 8
+    Types
+    [
+        {
+            Software    "Audio Workstation"
+            Chance      1
+        }
+        {
+            Software    "Image Editor"
+            Chance      1
+        }
+        {
+            Software    "Video Editor"
+            Chance      1
+        }
+    ]
+}

@@ -1,0 +1,126 @@
+SoftwareType
+{
+    Name            "Cloud Storage"
+    Description     "Server-based file hosting, backup, and synchronization."
+    Random          0.1
+    IdealPrice      60
+    OptimalDevTime  50
+    OneClient       False
+    InHouse         False
+    Popularity      1.0
+    Retention       360
+    Iterative       0.9
+    Hardware        False
+    SubmarketNames  [ Enterprise; Consumer; Sync Speed ]
+    NameGenerator   Software
+    Categories
+    [
+        {
+            Name            "Enterprise Data Backup"
+            Description     "Secure off-site storage for corporate disaster recovery."
+            Popularity      0.6
+            Retention       360
+            TimeScale       3
+            Iterative       0.85
+            Submarkets      [ 3; 0; 1 ]
+        }
+        {
+            Name            "Consumer Cloud Drive"
+            Description     "Personal file hosting with web access (e.g., Dropbox/Google Drive)."
+            Unlock          2007
+            Popularity      1.0
+            Retention       360
+            TimeScale       4
+            Iterative       0.85
+            Submarkets      [ 0; 3; 2 ]
+        }
+        {
+            Name            "Object Storage API"
+            Description     "Scalable cloud storage for developers and applications (e.g., Amazon S3)."
+            Unlock          2006
+            Popularity      0.8
+            Retention       360
+            TimeScale       4
+            Iterative       0.85
+            Submarkets      [ 3; 0; 3 ]
+        }
+    ]
+    Features
+    [
+        {
+            Name            "Data Management"
+            Spec            Network
+            DevTime         4
+            CodeArt         1
+            Submarkets      [ 2; 2; 3 ]
+            Features
+            [
+                {
+                    Name            "Desktop Sync Client"
+                    Description     "Automatically uploads changes from a local folder to the cloud."
+                    DevTime         4
+                    CodeArt         1
+                    Level           1
+                    Server          0.5
+                    Submarkets      [ 1; 3; 3 ]
+                }
+                {
+                    Name            "Public Link Sharing"
+                    Description     "Generate URLs so anyone can download specific files."
+                    Unlock          2008
+                    DevTime         2
+                    CodeArt         1
+                    Level           1
+                    Submarkets      [ 1; 3; 0 ]
+                }
+                {
+                    Name            "Real-Time Collaboration API"
+                    Description     "Allows office apps to edit documents stored on the drive simultaneously."
+                    Unlock          2012
+                    DevTime         6
+                    CodeArt         1
+                    Level           3
+                    Submarkets      [ 3; 1; 1 ]
+                }
+                {
+                    Name            "Block-Level Deduplication"
+                    Description     "Reduces storage redundancy, heavily decreasing server costs."
+                    Unlock          2010
+                    DevTime         4
+                    CodeArt         1
+                    Level           2
+                    Server          -0.3
+                    Submarkets      [ 3; 0; 0 ]
+                }
+            ]
+        }
+        {
+            Name            "Storage Security"
+            Spec            System
+            DevTime         3
+            CodeArt         1
+            Submarkets      [ 3; 1; 0 ]
+            Features
+            [
+                {
+                    Name            "End-to-End Encryption"
+                    Description     "Encrypts files client-side before they ever reach the server."
+                    Unlock          2011
+                    DevTime         5
+                    CodeArt         1
+                    Level           2
+                    Submarkets      [ 3; 2; 0 ]
+                }
+                {
+                    Name            "File Versioning"
+                    Description     "Keeps 30 days of history to recover from ransomware or accidental deletes."
+                    Unlock          2009
+                    DevTime         4
+                    CodeArt         1
+                    Level           2
+                    Submarkets      [ 3; 1; 0 ]
+                }
+            ]
+        }
+    ]
+}

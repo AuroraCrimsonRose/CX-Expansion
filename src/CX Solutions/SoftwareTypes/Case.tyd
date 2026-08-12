@@ -1,0 +1,178 @@
+SoftwareType
+{
+    Name            "Device Case"
+    Description     "The physical chassis or shell housing the device components."
+    Random          0.1
+    IdealPrice      100
+    OptimalDevTime  30
+    OneClient       False
+    InHouse         False
+    Popularity      1.0
+    Retention       240
+    Iterative       0.8
+    Hardware        True
+    Manufacturing
+    {
+        Components
+        [
+            {
+                Name            Plastic
+                BuiltInThumbnail Plastic
+                Price           5
+                Time            4
+            }
+        ]
+        Processes
+        [
+            {
+                Inputs          [ Plastic ]
+                Output          Final
+            }
+        ]
+        FinalTime       4
+    }
+    SubmarketNames  [ Cooling; Aesthetics; Durability ]
+    NameGenerator   Software
+    Categories
+    [
+        {
+            Name            "Retro Desktop Case"
+            Description     "Classic horizontal case with floppy drive bays, designed for monitors to sit on top."
+            Popularity      0.8
+            Retention       180
+            TimeScale       1
+            Iterative       0.85
+            Submarkets      [ 1; 1; 3 ]
+        }
+        {
+            Name            "Computer Full Tower"
+            Description     "Massive desktop case with ultimate expansion."
+            Popularity      0.7
+            Retention       240
+            TimeScale       2
+            Iterative       0.85
+            Submarkets      [ 3; 1; 1 ]
+        }
+        {
+            Name            "Computer Mid Tower"
+            Description     "Standard PC desktop case."
+            Popularity      1.0
+            Retention       180
+            TimeScale       1
+            Iterative       0.85
+            Submarkets      [ 2; 2; 1 ]
+        }
+        {
+            Name            "Laptop Shell"
+            Description     "Clamshell design housing keyboard and screen."
+            Popularity      1.0
+            Retention       120
+            TimeScale       2
+            Iterative       0.85
+            Submarkets      [ 1; 2; 2 ]
+        }
+        {
+            Name            "Smartphone Chassis"
+            Description     "Ultra-thin metal or glass body for phones."
+            Unlock          1994
+            Popularity      1.0
+            Retention       120
+            TimeScale       2
+            Iterative       0.85
+            Submarkets      [ 1; 3; 1 ]
+        }
+        {
+            Name            "Handheld/Console Shell"
+            Description     "Durable plastic housing for gaming devices."
+            Popularity      0.8
+            Retention       180
+            TimeScale       1
+            Iterative       0.85
+            Submarkets      [ 1; 1; 3 ]
+        }
+        {
+            Name            "Industrial / SBC Enclosure"
+            Description     "Rugged small case for Single Board Computers (e.g. Raspberry Pi) and industrial machines."
+            Popularity      0.6
+            Retention       360
+            TimeScale       1
+            Iterative       0.85
+            Submarkets      [ 1; 0; 3 ]
+        }
+        {
+            Name            "VR Headset Shell"
+            Description     "Lightweight housing with built-in VR lenses and head strap."
+            Unlock          2016
+            Popularity      0.8
+            Retention       240
+            TimeScale       2
+            Iterative       0.85
+            Submarkets      [ 1; 2; 3 ]
+        }
+    ]
+    Features
+    [
+        {
+            Name            "Chassis I/O"
+            Spec            Hardware
+            DevTime         2
+            CodeArt         1
+            Submarkets      [ 0; 1; 2 ]
+            Features
+            [
+                {
+                    Name            "Basic I/O Ports"
+                    Description     "Standard audio jacks and USB 2.0."
+                    DevTime         1
+                    CodeArt         1
+                    Level           1
+                    Submarkets      [ 0; 1; 1 ]
+                }
+                {
+                    Name            "High-Speed / Type-C I/O"
+                    Description     "USB 3.0 or USB-C headers."
+                    Unlock          2010
+                    DevTime         3
+                    CodeArt         1
+                    Level           2
+                    Submarkets      [ 0; 2; 2 ]
+                }
+                {
+                    Name            "Display Housing"
+                    Description     "Built-in space and mounts for a monitor screen (used in Laptops and AIOs)."
+                    DevTime         2
+                    CodeArt         1
+                    Level           1
+                    Submarkets      [ 0; 2; 1 ]
+                }
+            ]
+        }
+        {
+            Name            "Design Elements"
+            Spec            3D
+            DevTime         4
+            CodeArt         0.1
+            Submarkets      [ 1; 3; 1 ]
+            Features
+            [
+                {
+                    Name            "Cheap Plastic/Acrylic"
+                    Description     "Low cost materials."
+                    DevTime         2
+                    CodeArt         0.1
+                    Level           1
+                    Submarkets      [ 1; 1; 1 ]
+                }
+                {
+                    Name            "Premium Glass & Aluminum"
+                    Description     "High-end aesthetics and premium feel."
+                    Unlock          2010
+                    DevTime         5
+                    CodeArt         0
+                    Level           2
+                    Submarkets      [ 1; 3; 2 ]
+                }
+            ]
+        }
+    ]
+}

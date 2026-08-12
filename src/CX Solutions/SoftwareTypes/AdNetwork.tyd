@@ -1,0 +1,81 @@
+SoftwareType
+{
+    Name            "Ad Network"
+    Description     "A digital advertising service that serves ads to websites. Export this as a framework to take a cut of website revenues!"
+    Unlock          1996
+    Random          0.10
+    IdealPrice      250
+    OptimalDevTime  20
+    OneClient       False
+    InHouse         False
+    Popularity      0.5
+    Retention       30
+    Iterative       0.60
+    SubmarketNames  [ Targeting; Analytics; Reach ]
+    NameGenerator   Database
+    Features
+    [
+        {
+            Name            "Interface"
+            Spec            2D
+            DevTime         3
+            CodeArt         0.2
+            Submarkets      [ 1; 2; 1 ]
+            Features
+            [
+                {
+                    Name            "Advertiser Dashboard"
+                    Description     "A portal for companies to buy ad space."
+                    DevTime         3
+                    CodeArt         0.5
+                    Level           1
+                    Submarkets      [ 1; 2; 0 ]
+                }
+                {
+                    Name            "Publisher Dashboard"
+                    Description     "A portal for website owners to track their earnings."
+                    DevTime         3
+                    CodeArt         0.5
+                    Level           1
+                    Submarkets      [ 0; 2; 1 ]
+                }
+            ]
+        }
+        {
+            Name            "System"
+            Spec            System
+            DevTime         5
+            CodeArt         1
+            Submarkets      [ 2; 0; 1 ]
+            Features
+            [
+                {
+                    Name            "Ad Serving Engine"
+                    Description     "The core code that delivers ads to users instantly."
+                    DevTime         5
+                    CodeArt         1
+                    Level           1
+                    Submarkets      [ 0; 0; 3 ]
+                }
+                {
+                    Name            "User Tracking"
+                    Description     "Follows users across the web using cookies to serve better ads."
+                    Unlock          2000
+                    DevTime         4
+                    CodeArt         1
+                    Level           2
+                    Submarkets      [ 3; 0; 0 ]
+                }
+                {
+                    Name            "Real-Time Bidding"
+                    Description     "Automated auctions for ad space in milliseconds."
+                    Unlock          2010
+                    DevTime         6
+                    CodeArt         1
+                    Level           3
+                    Submarkets      [ 2; 0; 1 ]
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,36 @@
+CompanyType
+{
+	Specialization		"Semiconductor Fabrication"
+	PerYear				0.15
+	Min					4
+	Max					10
+    Frameworks          False
+	Types
+		[
+			{
+			Software	"Motherboard"
+			Chance		1
+			Force		False
+			}
+			{
+			Software	"Processor (CPU)"
+			Chance		1
+			Force		False
+			}
+			{
+			Software	"Graphics Card (GPU)"
+			Chance		1
+			Force		False
+			}
+			{
+			Software	"Memory (RAM)"
+			Chance		1
+			Force		False
+			}
+			{
+			Software	"BIOS / Firmware"
+			Chance		0.8
+			Force		False
+			}
+		]
+}

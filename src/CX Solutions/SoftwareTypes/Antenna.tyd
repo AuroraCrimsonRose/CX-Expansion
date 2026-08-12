@@ -1,0 +1,99 @@
+SoftwareType
+{
+    Name            "Wireless Antenna"
+    Description     "Hardware for transmitting and receiving radio signals in cellphones and laptops."
+    Random          0.1
+    IdealPrice      20
+    OptimalDevTime  25
+    OneClient       False
+    InHouse         False
+    Popularity      1.0
+    Retention       180
+    Iterative       0.8
+    Hardware        True
+    Manufacturing
+    {
+        Components
+        [
+            {
+                Name            PCB
+                BuiltInThumbnail PCB
+                Price           5
+                Time            4
+            }
+        ]
+        Processes
+        [
+            {
+                Inputs          [ PCB ]
+                Output          Final
+            }
+        ]
+        FinalTime       4
+    }
+    SubmarketNames  [ Range; Speed; Reliability ]
+    NameGenerator   Software
+    Categories
+    [
+        {
+            Name            "Internal Antenna (Mobile)"
+            Description     "Integrated cellular and Wi-Fi radio for cellphones and tablets."
+            Popularity      1.0
+            Retention       180
+            TimeScale       2
+            Iterative       0.85
+            Submarkets      [ 2; 2; 1 ]
+        }
+        {
+            Name            "PCIe Wi-Fi Card (Stationary)"
+            Description     "Add-in wireless card for desktop computers."
+            Unlock          1997
+            Popularity      1.0
+            Retention       240
+            TimeScale       2
+            Iterative       0.85
+            Submarkets      [ 1; 3; 1 ]
+        }
+        {
+            Name            "USB Bluetooth Dongle"
+            Description     "Short-range peripheral connection."
+            Unlock          1999
+            Popularity      0.9
+            Retention       240
+            TimeScale       1
+            Iterative       0.85
+            Submarkets      [ 1; 1; 3 ]
+        }
+    ]
+    Features
+    [
+        {
+            Name            "Radio Bands"
+            Spec            Hardware
+            DevTime         3
+            CodeArt         1
+            Submarkets      [ 1; 1; 1 ]
+            Features
+            [
+                {
+                    Name            "Multi-Band Support"
+                    Description     "Connects across various international frequencies."
+                    Unlock          2000
+                    DevTime         4
+                    CodeArt         1
+                    Level           1
+                    Submarkets      [ 2; 0; 2 ]
+                }
+                {
+                    Name            "MIMO (Multiple Input/Output)"
+                    Description     "Dramatically increases data throughput."
+                    Unlock          2007
+                    DevTime         5
+                    CodeArt         1
+                    Level           2
+                    Submarkets      [ 0; 3; 0 ]
+                }
+            ]
+        }
+    ]
+}

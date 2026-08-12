@@ -1,0 +1,16 @@
+Design
+    {
+    ID                  "Test Machine"
+    Name                "Test Machine"
+    BaseMesh            Test_Machine
+    Objects
+        [
+            { 
+            ID      Test_Machine
+            Name    Test_Machine
+            Mesh    Test_Machine.obj 
+            }
+        ]
+    BaseTexture         Main.png
+    NormalMap           Norm.png
+    }

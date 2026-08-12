@@ -1,0 +1,123 @@
+SoftwareType
+{
+    Name            "Expansion Card"
+    Description     "Add-in cards for bringing new capabilities to a computer."
+    Random          0.1
+    IdealPrice      50
+    OptimalDevTime  30
+    OneClient       False
+    InHouse         False
+    Popularity      0.8
+    Retention       240
+    Iterative       0.7
+    Hardware        True
+    Manufacturing
+    {
+        Components
+        [
+            {
+                Name            Plastic
+                BuiltInThumbnail Plastic
+                Price           5
+                Time            4
+            }
+        ]
+        Processes
+        [
+            {
+                Inputs          [ Plastic ]
+                Output          Final
+            }
+        ]
+        FinalTime       4
+    }
+    SubmarketNames  [ Audio; Networking; Connectivity ]
+    NameGenerator   Software
+    Categories
+    [
+        {
+            Name            "Sound Card"
+            Description     "Dedicated audio processing and MIDI synthesis."
+            Popularity      0.9
+            Retention       180
+            TimeScale       2
+            Iterative       0.85
+            Submarkets      [ 3; 0; 0 ]
+        }
+        {
+            Name            "Network Interface Card (NIC)"
+            Description     "Wired network connections for LAN and Internet."
+            Popularity      1.0
+            Retention       240
+            TimeScale       2
+            Iterative       0.85
+            Submarkets      [ 0; 3; 0 ]
+        }
+        {
+            Name            "I/O Expansion Card"
+            Description     "Adds extra Serial, Parallel, or USB ports."
+            Popularity      0.7
+            Retention       240
+            TimeScale       1
+            Iterative       0.85
+            Submarkets      [ 0; 0; 3 ]
+        }
+    ]
+    Features
+    [
+        {
+            Name            "Audio Processing"
+            Spec            Audio
+            DevTime         4
+            CodeArt         1
+            Submarkets      [ 2; 0; 0 ]
+            Features
+            [
+                {
+                    Name            "MIDI Synthesizer"
+                    Description     "Hardware MIDI playback."
+                    DevTime         3
+                    CodeArt         1
+                    Level           1
+                    Submarkets      [ 3; 0; 0 ]
+                }
+                {
+                    Name            "Surround Sound"
+                    Description     "5.1 and 7.1 channel audio support."
+                    Unlock          1998
+                    DevTime         5
+                    CodeArt         1
+                    Level           2
+                    Submarkets      [ 3; 0; 0 ]
+                }
+            ]
+        }
+        {
+            Name            "Networking Speeds"
+            Spec            Network
+            DevTime         3
+            CodeArt         1
+            Submarkets      [ 0; 2; 0 ]
+            Features
+            [
+                {
+                    Name            "10/100 Ethernet"
+                    Description     "Standard Fast Ethernet."
+                    DevTime         2
+                    CodeArt         1
+                    Level           1
+                    Submarkets      [ 0; 2; 0 ]
+                }
+                {
+                    Name            "Gigabit Ethernet"
+                    Description     "1000 Mbps networking."
+                    Unlock          1999
+                    DevTime         4
+                    CodeArt         1
+                    Level           2
+                    Submarkets      [ 0; 3; 0 ]
+                }
+            ]
+        }
+    ]
+}

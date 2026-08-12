@@ -1,0 +1,26 @@
+CompanyType
+{
+	Specialization		"Deep Tech Lab"
+	PerYear				0.1
+	Min					2
+	Max					6
+    Frameworks          True
+	Types
+		[
+			{
+			Software	"AI Services"
+			Chance		1
+			Force		False
+			}
+			{
+			Software	"Render Engine"
+			Chance		0.8
+			Force		False
+			}
+			{
+			Software	"Virtual Machine (Hypervisor)"
+			Chance		1
+			Force		False
+			}
+		]
+}

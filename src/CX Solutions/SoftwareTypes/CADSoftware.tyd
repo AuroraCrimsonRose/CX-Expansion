@@ -1,0 +1,94 @@
+SoftwareType
+{
+    Name            "CAD Software"
+    Description     "Computer-Aided Design and 3D modeling."
+    Random          0.1
+    IdealPrice      400
+    OptimalDevTime  65
+    OneClient       False
+    InHouse         False
+    Popularity      0.6
+    Retention       360
+    Iterative       0.8
+    Hardware        False
+    SubmarketNames  [ Drafting; Modeling; Animation ]
+    NameGenerator   Software
+    Categories
+    [
+        {
+            Name            "2D Drafting"
+            Description     "Technical drawing and blueprints."
+            Popularity      0.8
+            Retention       240
+            TimeScale       2
+            Iterative       0.85
+            Submarkets      [ 3; 0; 0 ]
+        }
+        {
+            Name            "3D Modeler"
+            Description     "Polygonal modeling for games and VFX."
+            Popularity      0.9
+            Retention       240
+            TimeScale       3
+            Iterative       0.85
+            Submarkets      [ 0; 3; 1 ]
+        }
+        {
+            Name            "3D Animation Suite"
+            Description     "Rigging, animation, and rendering."
+            Popularity      0.7
+            Retention       360
+            TimeScale       4
+            Iterative       0.85
+            Submarkets      [ 0; 1; 3 ]
+        }
+    ]
+    Features
+    [
+        {
+            Name            "Modeling Tools"
+            Spec            3D
+            DevTime         5
+            CodeArt         0.7
+            Submarkets      [ 1; 3; 0 ]
+            Features
+            [
+                {
+                    Name            "NURBS & Splines"
+                    Description     "Mathematical curves for precise surfaces."
+                    DevTime         4
+                    CodeArt         0.8
+                    Level           1
+                    Submarkets      [ 3; 1; 0 ]
+                }
+                {
+                    Name            "Sculpting Engine"
+                    Description     "Digital clay with millions of polygons."
+                    Unlock          2004
+                    DevTime         6
+                    CodeArt         0.5
+                    Level           2
+                    Submarkets      [ 0; 3; 0 ]
+                }
+                {
+                    Name            "Global Illumination"
+                    Description     "Physically accurate light bouncing."
+                    Unlock          2001
+                    DevTime         5
+                    CodeArt         0.9
+                    Level           2
+                    Submarkets      [ 0; 2; 2 ]
+                }
+                {
+                    Name            "Physics Simulators"
+                    Description     "Cloth, fluid, and rigid body dynamics."
+                    Unlock          1999
+                    DevTime         7
+                    CodeArt         0.8
+                    Level           3
+                    Submarkets      [ 0; 0; 3 ]
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,128 @@
+SoftwareType
+{
+    Name            "Computer Mouse"
+    Description     "Pointing devices for navigating graphical user interfaces."
+    Random          0.1
+    IdealPrice      40
+    OptimalDevTime  25
+    OneClient       False
+    InHouse         False
+    Popularity      1.0
+    Retention       240
+    Iterative       0.8
+    Hardware        True
+    Manufacturing
+    {
+        Components
+        [
+            {
+                Name            Plastic
+                BuiltInThumbnail Plastic
+                Price           5
+                Time            4
+            }
+        ]
+        Processes
+        [
+            {
+                Inputs          [ Plastic ]
+                Output          Final
+            }
+        ]
+        FinalTime       4
+    }
+    SubmarketNames  [ Precision; Ergonomics; Features ]
+    NameGenerator   Hardware
+    Categories
+    [
+        {
+            Name            "Mechanical Ball Mouse"
+            Description     "Uses a heavy rubber ball to track movement. Needs frequent cleaning."
+            Popularity      0.8
+            Retention       120
+            TimeScale       1
+            Iterative       0.85
+            Submarkets      [ 1; 1; 0 ]
+        }
+        {
+            Name            "Optical Mouse"
+            Description     "Uses an LED to track movement. No moving parts!"
+            Unlock          1999
+            Popularity      1.0
+            Retention       240
+            TimeScale       2
+            Iterative       0.85
+            Submarkets      [ 2; 1; 0 ]
+        }
+        {
+            Name            "Laser Mouse"
+            Description     "Uses a laser diode for extreme DPI and tracking on glass."
+            Unlock          2004
+            Popularity      0.9
+            Retention       240
+            TimeScale       3
+            Iterative       0.85
+            Submarkets      [ 3; 1; 0 ]
+        }
+        {
+            Name            "Trackpad / Touchpad"
+            Description     "Stationary touch surface for laptops or desktop gestures."
+            Unlock          1994
+            Popularity      0.7
+            Retention       240
+            TimeScale       2
+            Iterative       0.85
+            Submarkets      [ 1; 2; 2 ]
+        }
+        {
+            Name            "Vertical Mouse"
+            Description     "Keeps the wrist in a handshake position to prevent RSI."
+            Unlock          2012
+            Popularity      0.4
+            Retention       360
+            TimeScale       2
+            Iterative       0.85
+            Submarkets      [ 1; 3; 0 ]
+        }
+    ]
+    Features
+    [
+        {
+            Name            "Mouse Features"
+            Spec            Hardware
+            DevTime         2
+            CodeArt         1
+            Submarkets      [ 1; 1; 1 ]
+            Features
+            [
+                {
+                    Name            "Wireless / Bluetooth"
+                    Description     "Untethered movement."
+                    Unlock          2001
+                    DevTime         3
+                    CodeArt         1
+                    Level           1
+                    Submarkets      [ 0; 1; 2 ]
+                }
+                {
+                    Name            "MMO / Extra Side Buttons"
+                    Description     "A whole grid of buttons on the side for macros."
+                    Unlock          2009
+                    DevTime         4
+                    CodeArt         1
+                    Level           2
+                    Submarkets      [ 1; 0; 3 ]
+                }
+                {
+                    Name            "Adjustable Weights"
+                    Description     "Physical metal weights that can be added or removed."
+                    Unlock          2007
+                    DevTime         2
+                    CodeArt         1
+                    Level           1
+                    Submarkets      [ 2; 1; 0 ]
+                }
+            ]
+        }
+    ]
+}

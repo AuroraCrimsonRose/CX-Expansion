@@ -1,0 +1,115 @@
+SoftwareType
+{
+    Name            "Multimedia Software"
+    Description     "Media players, codec packs, and library managers."
+    Random          0.1
+    IdealPrice      30
+    OptimalDevTime  35
+    OneClient       False
+    InHouse         False
+    Popularity      1.0
+    Retention       180
+    Iterative       0.7
+    Hardware        False
+    SubmarketNames  [ Playback; Encoding; Library ]
+    NameGenerator   Software
+    Categories
+    [
+        {
+            Name            "Audio Player"
+            Description     "Plays music files like MP3 and WAV."
+            Popularity      0.8
+            Retention       120
+            TimeScale       1
+            Iterative       0.85
+            Submarkets      [ 2; 0; 1 ]
+        }
+        {
+            Name            "Video Player"
+            Description     "Plays high-resolution video files."
+            Popularity      0.9
+            Retention       120
+            TimeScale       2
+            Iterative       0.85
+            Submarkets      [ 2; 1; 0 ]
+        }
+        {
+            Name            "Codec Pack"
+            Description     "Bundles encoding and decoding libraries."
+            Popularity      0.6
+            Retention       240
+            TimeScale       2
+            Iterative       0.85
+            Submarkets      [ 0; 3; 0 ]
+        }
+        {
+            Name            "Media Organizer"
+            Description     "Library management for large multimedia collections."
+            Popularity      0.7
+            Retention       180
+            TimeScale       2
+            Iterative       0.85
+            Submarkets      [ 1; 0; 3 ]
+        }
+    ]
+    Features
+    [
+        {
+            Name            "Audio Decoding"
+            Spec            Audio
+            DevTime         2
+            CodeArt         1
+            Submarkets      [ 1; 1; 0 ]
+            Features
+            [
+                {
+                    Name            "Lossless Audio Support"
+                    Description     "FLAC and ALAC decoding."
+                    Unlock          2001
+                    DevTime         3
+                    CodeArt         1
+                    Level           1
+                    Submarkets      [ 2; 1; 0 ]
+                }
+            ]
+        }
+        {
+            Name            "Video Rendering"
+            Spec            2D
+            DevTime         3
+            CodeArt         1
+            Submarkets      [ 2; 1; 0 ]
+            Features
+            [
+                {
+                    Name            "Hardware Acceleration"
+                    Description     "Offloads video decoding to the GPU."
+                    Unlock          2005
+                    DevTime         5
+                    CodeArt         1
+                    Level           2
+                    Submarkets      [ 3; 2; 0 ]
+                }
+            ]
+        }
+        {
+            Name            "Organization Tools"
+            Spec            System
+            DevTime         2
+            CodeArt         1
+            Submarkets      [ 0; 0; 2 ]
+            Features
+            [
+                {
+                    Name            "Metadata Fetching"
+                    Description     "Automatically downloads album art and descriptions."
+                    Unlock          1998
+                    DevTime         3
+                    CodeArt         1
+                    Level           1
+                    Submarkets      [ 0; 0; 3 ]
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,96 @@
+SoftwareType
+{
+    Name            "Antivirus Software"
+    Description     "Security software to protect computers from malware and intrusions."
+    Random          0.1
+    IdealPrice      60
+    OptimalDevTime  40
+    OneClient       False
+    InHouse         False
+    Popularity      0.9
+    Retention       360
+    Iterative       0.8
+    Hardware        False
+    SubmarketNames  [ Detection; Performance; Privacy ]
+    NameGenerator   Software
+    Categories
+    [
+        {
+            Name            "Basic Scanner"
+            Description     "On-demand virus scanning."
+            Popularity      0.8
+            Retention       180
+            TimeScale       1
+            Iterative       0.85
+            Submarkets      [ 3; 0; 0 ]
+        }
+        {
+            Name            "Internet Security Suite"
+            Description     "Active protection, basic firewall, and web filtering."
+            Unlock          1995
+            Popularity      1.0
+            Retention       240
+            TimeScale       2
+            Iterative       0.85
+            Submarkets      [ 2; 0; 1 ]
+        }
+        {
+            Name            "Enterprise Endpoint"
+            Description     "Fleet-wide corporate security management."
+            Unlock          2000
+            Popularity      0.7
+            Retention       360
+            TimeScale       3
+            Iterative       0.85
+            Submarkets      [ 1; 0; 2 ]
+        }
+    ]
+    Features
+    [
+        {
+            Name            "Engine Optimization"
+            Spec            System
+            DevTime         4
+            CodeArt         1
+            Submarkets      [ 0; 3; 0 ]
+            Features
+            [
+                {
+                    Name            "Background Scanning"
+                    Description     "Runs quietly without lagging the OS."
+                    DevTime         4
+                    CodeArt         1
+                    Level           1
+                    Submarkets      [ 0; 2; 0 ]
+                }
+                {
+                    Name            "Cloud-Assisted Detection"
+                    Description     "Offloads heavy scanning calculations to the cloud."
+                    Unlock          2008
+                    DevTime         5
+                    CodeArt         1
+                    Level           2
+                    Submarkets      [ 0; 3; 0 ]
+                }
+                {
+                    Name            "Heuristic Analysis"
+                    Description     "Detects unknown viruses by analyzing suspicious behavior."
+                    Unlock          1992
+                    DevTime         3
+                    CodeArt         1
+                    Level           1
+                    Submarkets      [ 2; 0; 0 ]
+                }
+                {
+                    Name            "Zero-Day Protection"
+                    Description     "Advanced AI to block brand new exploits immediately."
+                    Unlock          2012
+                    DevTime         6
+                    CodeArt         1
+                    Level           2
+                    Submarkets      [ 3; 0; 0 ]
+                }
+            ]
+        }
+    ]
+}

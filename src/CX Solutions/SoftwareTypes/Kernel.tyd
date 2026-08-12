@@ -1,0 +1,131 @@
+SoftwareType
+{
+    Name            "Kernel"
+    Description     "The core bridge between software and hardware. Required to build an Operating System!"
+    Random          0.1
+    IdealPrice      100
+    OptimalDevTime  45
+    OneClient       False
+    InHouse         True
+    Popularity      0.8
+    Retention       120
+    Iterative       0.8
+    SubmarketNames  [ Performance; Security; Stability ]
+    NameGenerator   Software
+    Categories
+    [
+        {
+            Name            "Monolithic Kernel"
+            Description     "All OS services run in the main kernel space. Fast but less stable."
+            Popularity      1.0
+            Retention       72
+            TimeScale       2
+            Iterative       0.85
+            Submarkets      [ 3; 0; 1 ]
+        }
+        {
+            Name            "Microkernel"
+            Description     "Minimal core, services run in user space. Very stable."
+            Unlock          1985
+            Popularity      0.8
+            Retention       96
+            TimeScale       3
+            Iterative       0.85
+            Submarkets      [ 0; 2; 3 ]
+        }
+        {
+            Name            "Hybrid Kernel"
+            Description     "Best of both worlds, used in modern massive OSs."
+            Unlock          1992
+            Popularity      0.9
+            Retention       120
+            TimeScale       4
+            Iterative       0.85
+            Submarkets      [ 2; 1; 2 ]
+        }
+        {
+            Name            "Real-Time Kernel (RTOS)"
+            Description     "Guarantees execution times. Essential for industrial IoT and Embedded."
+            Popularity      0.5
+            Retention       60
+            TimeScale       2
+            Iterative       0.85
+            Submarkets      [ 1; 3; 0 ]
+        }
+    ]
+    Features
+    [
+        {
+            Name            "Architecture Support"
+            Spec            System
+            DevTime         5
+            CodeArt         1
+            Submarkets      [ 1; 1; 1 ]
+            Features
+            [
+                {
+                    Name            "x86 Desktop"
+                    Description     "Basic 32-bit computer architecture."
+                    DevTime         5
+                    CodeArt         1
+                    Level           1
+                    Submarkets      [ 1; 0; 0 ]
+                }
+                {
+                    Name            "x64 Desktop / Server"
+                    Description     "64-bit architecture for massive memory."
+                    Unlock          2003
+                    DevTime         7
+                    CodeArt         1
+                    Level           2
+                    FrameworkRequirement "Programming Language"
+                    Submarkets      [ 1; 0; 1 ]
+                }
+                {
+                    Name            "ARM / Mobile SoC"
+                    Description     "Low power architecture for handhelds and phones."
+                    Unlock          1995
+                    DevTime         5
+                    CodeArt         1
+                    Level           2
+                    Submarkets      [ 1; 1; 0 ]
+                }
+                {
+                    Name            "Embedded Chips"
+                    Description     "Extremely low power architecture for IoT."
+                    DevTime         4
+                    CodeArt         1
+                    Level           1
+                    Submarkets      [ 0; 1; 1 ]
+                }
+                {
+                    Name            "Basic Paging"
+                    Description     "Simple memory management."
+                    DevTime         3
+                    CodeArt         1
+                    Level           1
+                    Submarkets      [ 1; 0; 0 ]
+                }
+                {
+                    Name            "Virtual Memory"
+                    Description     "Swaps memory to disk to prevent crashing."
+                    Unlock          1990
+                    DevTime         5
+                    CodeArt         1
+                    Level           2
+                    Submarkets      [ 2; 0; 1 ]
+                }
+                {
+                    Name            "Multi-threading"
+                    Description     "Allows parallel execution of processes."
+                    Unlock          1995
+                    DevTime         6
+                    CodeArt         1
+                    Level           3
+                    FrameworkRequirement "Programming Language"
+                    Submarkets      [ 3; 0; 0 ]
+                }
+            ]
+        }
+    ]
+}

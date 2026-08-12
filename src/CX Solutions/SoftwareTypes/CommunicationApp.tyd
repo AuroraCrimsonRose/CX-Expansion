@@ -1,0 +1,105 @@
+SoftwareType
+{
+    Name            "Communication App"
+    Description     "Software for text chatting, VoIP, and video calls."
+    Random          0.1
+    IdealPrice      20
+    OptimalDevTime  35
+    OneClient       False
+    InHouse         False
+    Popularity      1.0
+    Retention       240
+    Iterative       0.8
+    Hardware        False
+    SubmarketNames  [ Text Chat; Voice & Video; Privacy ]
+    NameGenerator   Software
+    Categories
+    [
+        {
+            Name            "IRC Client"
+            Description     "Simple text-based chatrooms."
+            Popularity      0.8
+            Retention       120
+            TimeScale       1
+            Iterative       0.85
+            Submarkets      [ 3; 0; 0 ]
+        }
+        {
+            Name            "VoIP Application"
+            Description     "Voice over IP for gaming and calls."
+            Unlock          2003
+            Popularity      0.9
+            Retention       180
+            TimeScale       2
+            Iterative       0.85
+            Submarkets      [ 0; 3; 0 ]
+        }
+        {
+            Name            "Corporate Messenger"
+            Description     "Feature-rich team collaboration."
+            Unlock          2013
+            Popularity      1.0
+            Retention       240
+            TimeScale       3
+            Iterative       0.85
+            Submarkets      [ 2; 1; 0 ]
+        }
+    ]
+    Features
+    [
+        {
+            Name            "Network Architecture"
+            Spec            Network
+            DevTime         4
+            CodeArt         1
+            Submarkets      [ 0; 0; 3 ]
+            Features
+            [
+                {
+                    Name            "Centralized Servers"
+                    Description     "All data flows through company-owned servers. Fast but fully controlled."
+                    DevTime         2
+                    CodeArt         1
+                    Level           1
+                    Submarkets      [ 1; 1; 0 ]
+                }
+                {
+                    Name            "Federated Network"
+                    Description     "Users on independent servers can communicate with each other seamlessly."
+                    Unlock          1999
+                    DevTime         4
+                    CodeArt         1
+                    Level           2
+                    Submarkets      [ 0; 0; 2 ]
+                }
+                {
+                    Name            "Decentralized P2P"
+                    Description     "No central authority. Direct peer-to-peer encrypted connections."
+                    Unlock          2001
+                    DevTime         5
+                    CodeArt         1
+                    Level           3
+                    Submarkets      [ 0; 0; 3 ]
+                }
+                {
+                    Name            "High-Quality Voice"
+                    Description     "Low latency audio codecs for crystal clear calls."
+                    Unlock          2003
+                    DevTime         3
+                    CodeArt         1
+                    Level           1
+                    Submarkets      [ 0; 3; 0 ]
+                }
+                {
+                    Name            "HD Video Calling"
+                    Description     "Real-time video streaming."
+                    Unlock          2006
+                    DevTime         5
+                    CodeArt         1
+                    Level           2
+                    Submarkets      [ 0; 3; 0 ]
+                }
+            ]
+        }
+    ]
+}

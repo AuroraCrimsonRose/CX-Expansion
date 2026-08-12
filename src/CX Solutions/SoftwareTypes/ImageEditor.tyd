@@ -1,0 +1,104 @@
+SoftwareType
+{
+    Name            "Image Editor"
+    Description     "Software for manipulating photos and creating illustrations."
+    Random          0.1
+    IdealPrice      150
+    OptimalDevTime  45
+    OneClient       False
+    InHouse         False
+    Popularity      0.9
+    Retention       240
+    Iterative       0.8
+    Hardware        False
+    SubmarketNames  [ Raster; Vector; UI Design ]
+    NameGenerator   Software
+    Categories
+    [
+        {
+            Name            "Photo Retoucher"
+            Description     "Focuses on raster image manipulation."
+            Popularity      1.0
+            Retention       180
+            TimeScale       2
+            Iterative       0.85
+            Submarkets      [ 3; 0; 0 ]
+        }
+        {
+            Name            "Vector Illustrator"
+            Description     "Scalable graphics for logos and print."
+            Popularity      0.8
+            Retention       240
+            TimeScale       2
+            Iterative       0.85
+            Submarkets      [ 0; 3; 1 ]
+        }
+        {
+            Name            "Creative Suite"
+            Description     "All-in-one image and design toolkit."
+            Popularity      1.0
+            Retention       240
+            TimeScale       3
+            Iterative       0.85
+            Submarkets      [ 2; 2; 2 ]
+        }
+    ]
+    Features
+    [
+        {
+            Name            "Canvas & Brushes"
+            Spec            2D
+            DevTime         4
+            CodeArt         0.5
+            Submarkets      [ 2; 1; 1 ]
+            Features
+            [
+                {
+                    Name            "Advanced Brushes"
+                    Description     "Customizable physics-based brush engine."
+                    DevTime         3
+                    CodeArt         0.2
+                    Level           1
+                    Submarkets      [ 3; 0; 0 ]
+                }
+                {
+                    Name            "Vector Splines"
+                    Description     "Bézier curves and node editing."
+                    Unlock          1995
+                    DevTime         4
+                    CodeArt         0.5
+                    Level           2
+                    Submarkets      [ 0; 3; 1 ]
+                }
+            ]
+        }
+        {
+            Name            "Workflow Tools"
+            Spec            System
+            DevTime         3
+            CodeArt         1
+            Submarkets      [ 1; 1; 3 ]
+            Features
+            [
+                {
+                    Name            "Non-Destructive Layers"
+                    Description     "Edit without permanently altering base pixels."
+                    Unlock          1994
+                    DevTime         5
+                    CodeArt         1
+                    Level           2
+                    Submarkets      [ 2; 1; 0 ]
+                }
+                {
+                    Name            "Artboards"
+                    Description     "Multiple canvases for UI design."
+                    Unlock          2010
+                    DevTime         3
+                    CodeArt         0.8
+                    Level           1
+                    Submarkets      [ 0; 1; 3 ]
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,117 @@
+SoftwareType
+{
+    Name            "Virtual Machine (Hypervisor)"
+    Description     "Software that creates and runs virtualized operating systems."
+    Random          0.1
+    IdealPrice      120
+    OptimalDevTime  55
+    OneClient       False
+    InHouse         False
+    Popularity      0.7
+    Retention       360
+    Iterative       0.9
+    Hardware        False
+    SubmarketNames  [ Stability; Efficiency; Security ]
+    NameGenerator   Software
+    Categories
+    [
+        {
+            Name            "Desktop Hypervisor (Type-2)"
+            Description     "Runs on a host OS to test other operating systems (e.g., VirtualBox)."
+            Unlock          1998
+            Popularity      0.8
+            Retention       240
+            TimeScale       3
+            Iterative       0.85
+            Submarkets      [ 1; 1; 3 ]
+        }
+        {
+            Name            "Bare-Metal Hypervisor (Type-1)"
+            Description     "Runs directly on server hardware for maximum efficiency (e.g., ESXi, Proxmox)."
+            Unlock          2001
+            Popularity      0.9
+            Retention       360
+            TimeScale       4
+            Iterative       0.85
+            Submarkets      [ 3; 3; 1 ]
+        }
+        {
+            Name            "Container Engine"
+            Description     "Lightweight OS-level virtualization for microservices (e.g., Docker)."
+            Unlock          2013
+            Popularity      1.0
+            Retention       360
+            TimeScale       4
+            Iterative       0.85
+            Submarkets      [ 1; 3; 2 ]
+        }
+    ]
+    Features
+    [
+        {
+            Name            "Virtualization Tech"
+            Spec            System
+            DevTime         5
+            CodeArt         1
+            Submarkets      [ 2; 3; 0 ]
+            Features
+            [
+                {
+                    Name            "Dynamic Resource Allocation"
+                    Description     "Shifts CPU and RAM between VMs on the fly."
+                    Unlock          2003
+                    DevTime         4
+                    CodeArt         1
+                    Level           1
+                    Submarkets      [ 2; 3; 0 ]
+                }
+                {
+                    Name            "Live Migration"
+                    Description     "Moves a running VM from one physical server to another without downtime."
+                    Unlock          2008
+                    DevTime         5
+                    CodeArt         1
+                    Level           2
+                    Submarkets      [ 3; 2; 0 ]
+                }
+                {
+                    Name            "Snapshotting & Rollbacks"
+                    Description     "Saves the exact state of a VM to revert to if something breaks."
+                    Unlock          2002
+                    DevTime         3
+                    CodeArt         1
+                    Level           1
+                    Submarkets      [ 3; 0; 2 ]
+                }
+            ]
+        }
+        {
+            Name            "Networking & Security"
+            Spec            Network
+            DevTime         4
+            CodeArt         1
+            Submarkets      [ 1; 1; 3 ]
+            Features
+            [
+                {
+                    Name            "Virtual Switches"
+                    Description     "Routes traffic between VMs without physical cables."
+                    Unlock          2004
+                    DevTime         4
+                    CodeArt         1
+                    Level           1
+                    Submarkets      [ 1; 2; 1 ]
+                }
+                {
+                    Name            "Hardware Isolation"
+                    Description     "Prevents a compromised VM from infecting the host machine."
+                    Unlock          2006
+                    DevTime         5
+                    CodeArt         1
+                    Level           2
+                    Submarkets      [ 2; 0; 3 ]
+                }
+            ]
+        }
+    ]
+}

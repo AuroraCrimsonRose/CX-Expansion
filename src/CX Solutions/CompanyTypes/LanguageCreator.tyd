@@ -1,0 +1,22 @@
+CompanyType
+{
+    Specialization      "Programming Language"
+    PerYear             0.1
+    MinFame             0
+    MaxFame             100
+    Min                 1
+    Max                 3
+    FrameworkTypes      [ "Programming Language"; "IDE" ]
+    Types
+    [
+        {
+            Software    "Programming Language"
+            Chance      0.8
+            Force       True
+        }
+        {
+            Software    "IDE"
+            Chance      0.4
+        }
+    ]
+}

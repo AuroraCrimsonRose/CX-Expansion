@@ -1,0 +1,103 @@
+SoftwareType
+{
+    Name            "Video Editor"
+    Description     "Non-linear editing software for film and television."
+    Random          0.1
+    IdealPrice      250
+    OptimalDevTime  55
+    OneClient       False
+    InHouse         False
+    Popularity      0.7
+    Retention       240
+    Iterative       0.8
+    Hardware        False
+    SubmarketNames  [ Editing; Compositing; Color Grading ]
+    NameGenerator   Software
+    Categories
+    [
+        {
+            Name            "Basic NLE"
+            Description     "Simple timeline editing."
+            Popularity      0.9
+            Retention       120
+            TimeScale       2
+            Iterative       0.85
+            Submarkets      [ 3; 0; 0 ]
+        }
+        {
+            Name            "VFX Software"
+            Description     "Node-based compositing and effects."
+            Popularity      0.6
+            Retention       240
+            TimeScale       3
+            Iterative       0.85
+            Submarkets      [ 0; 3; 1 ]
+        }
+        {
+            Name            "Color Grading Suite"
+            Description     "High-end color correction."
+            Popularity      0.5
+            Retention       240
+            TimeScale       2
+            Iterative       0.85
+            Submarkets      [ 0; 1; 3 ]
+        }
+    ]
+    Features
+    [
+        {
+            Name            "Video Pipeline"
+            Spec            2D
+            DevTime         4
+            CodeArt         0.8
+            Submarkets      [ 2; 1; 1 ]
+            Features
+            [
+                {
+                    Name            "Hardware Encoding"
+                    Description     "Offloads rendering to GPUs."
+                    Unlock          2005
+                    DevTime         5
+                    CodeArt         1
+                    Level           2
+                    Submarkets      [ 2; 2; 0 ]
+                }
+                {
+                    Name            "Multi-Cam Support"
+                    Description     "Sync and edit multiple camera angles."
+                    Unlock          2002
+                    DevTime         4
+                    CodeArt         1
+                    Level           1
+                    Submarkets      [ 3; 0; 0 ]
+                }
+            ]
+        }
+        {
+            Name            "Advanced Effects"
+            Spec            Audio
+            DevTime         5
+            CodeArt         0.5
+            Submarkets      [ 0; 3; 2 ]
+            Features
+            [
+                {
+                    Name            "Chroma Keying"
+                    Description     "Green screen removal algorithms."
+                    DevTime         4
+                    CodeArt         0.5
+                    Level           1
+                    Submarkets      [ 0; 3; 0 ]
+                }
+                {
+                    Name            "Audio Mixing Console"
+                    Description     "Integrated DAW features for sound design."
+                    DevTime         5
+                    CodeArt         0.8
+                    Level           2
+                    Submarkets      [ 1; 0; 0 ]
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,106 @@
+SoftwareType
+{
+    Name            "Identity Management"
+    Description     "Enterprise software for Active Directory, Access Control, and SSO."
+    Random          0.1
+    IdealPrice      400
+    OptimalDevTime  50
+    OneClient       False
+    InHouse         False
+    Popularity      0.6
+    Retention       360
+    Iterative       0.9
+    Hardware        False
+    SubmarketNames  [ Security; Integration; Scale ]
+    NameGenerator   Software
+    Categories
+    [
+        {
+            Name            "Local Directory Server"
+            Description     "Basic LDAP user management for a single office."
+            Popularity      0.8
+            Retention       240
+            TimeScale       2
+            Iterative       0.85
+            Submarkets      [ 1; 0; 1 ]
+        }
+        {
+            Name            "Enterprise Active Directory"
+            Description     "Massive multi-domain user access control."
+            Unlock          1999
+            Popularity      0.9
+            Retention       360
+            TimeScale       3
+            Iterative       0.85
+            Submarkets      [ 2; 0; 3 ]
+        }
+        {
+            Name            "Cloud SSO Identity Provider"
+            Description     "Single Sign-On provider (e.g., Okta, Auth0)."
+            Unlock          2012
+            Popularity      1.0
+            Retention       360
+            TimeScale       3
+            Iterative       0.85
+            Submarkets      [ 1; 3; 2 ]
+        }
+    ]
+    Features
+    [
+        {
+            Name            "Authentication Protocols"
+            Spec            Network
+            DevTime         4
+            CodeArt         1
+            Submarkets      [ 2; 1; 0 ]
+            Features
+            [
+                {
+                    Name            "Kerberos Tickets"
+                    Description     "Standard secure local authentication."
+                    DevTime         3
+                    CodeArt         1
+                    Level           1
+                    Submarkets      [ 2; 0; 0 ]
+                }
+                {
+                    Name            "OAuth 2.0 & SAML"
+                    Description     "Modern federated authentication for integrating third-party apps."
+                    Unlock          2010
+                    DevTime         5
+                    CodeArt         1
+                    Level           2
+                    Submarkets      [ 1; 3; 0 ]
+                }
+            ]
+        }
+        {
+            Name            "Access Features"
+            Spec            System
+            DevTime         3
+            CodeArt         1
+            Submarkets      [ 1; 0; 2 ]
+            Features
+            [
+                {
+                    Name            "Group Policy"
+                    Description     "Enforce administrative rules across entire fleets of computers."
+                    Unlock          2000
+                    DevTime         4
+                    CodeArt         1
+                    Level           1
+                    Submarkets      [ 1; 0; 2 ]
+                }
+                {
+                    Name            "Multi-Factor Auth (MFA)"
+                    Description     "Requires a secondary device or token to login securely."
+                    Unlock          2006
+                    DevTime         4
+                    CodeArt         1
+                    Level           2
+                    Submarkets      [ 3; 0; 0 ]
+                }
+            ]
+        }
+    ]
+}

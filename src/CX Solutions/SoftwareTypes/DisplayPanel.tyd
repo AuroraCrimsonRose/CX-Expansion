@@ -1,0 +1,109 @@
+SoftwareType
+{
+    Name            "Display Panel"
+    Description     "Physical display screen component used in monitors, laptops, phones, and TVs."
+    Random          0.1
+    IdealPrice      150
+    OptimalDevTime  45
+    OneClient       False
+    InHouse         False
+    Popularity      1.0
+    Retention       240
+    Iterative       0.8
+    Hardware        True
+    Manufacturing
+    {
+        Components
+        [
+            {
+                Name            Plastic
+                BuiltInThumbnail Plastic
+                Price           5
+                Time            4
+            }
+        ]
+        Processes
+        [
+            {
+                Inputs          [ Plastic ]
+                Output          Final
+            }
+        ]
+        FinalTime       4
+    }
+    SubmarketNames  [ Color Accuracy; Refresh Rate; Contrast ]
+    NameGenerator   Hardware
+    Categories
+    [
+        {
+            Name            "CRT Tube"
+            Description     "Heavy, bulky Cathode Ray Tube. Excellent motion clarity."
+            Popularity      0.8
+            Retention       120
+            TimeScale       1
+            Iterative       0.85
+            Submarkets      [ 1; 3; 2 ]
+        }
+        {
+            Name            "LCD Panel"
+            Description     "Thin Liquid Crystal Display. Lighter but worse contrast."
+            Unlock          1997
+            Popularity      1.0
+            Retention       180
+            TimeScale       2
+            Iterative       0.85
+            Submarkets      [ 1; 1; 1 ]
+        }
+        {
+            Name            "LED-Backlit LCD"
+            Description     "Thinner and much brighter than standard CCFL LCDs."
+            Unlock          2007
+            Popularity      1.0
+            Retention       240
+            TimeScale       2
+            Iterative       0.85
+            Submarkets      [ 2; 2; 2 ]
+        }
+        {
+            Name            "OLED Panel"
+            Description     "Organic LEDs with true blacks and infinite contrast."
+            Unlock          2012
+            Popularity      0.8
+            Retention       360
+            TimeScale       4
+            Iterative       0.85
+            Submarkets      [ 3; 3; 3 ]
+        }
+    ]
+    Features
+    [
+        {
+            Name            "Panel Upgrades"
+            Spec            Hardware
+            DevTime         4
+            CodeArt         1
+            Submarkets      [ 1; 2; 0 ]
+            Features
+            [
+                {
+                    Name            "Touch Screen Digitizer"
+                    Description     "Capacitive touch layer for direct screen interaction."
+                    Unlock          2007
+                    DevTime         4
+                    CodeArt         1
+                    Level           1
+                    Submarkets      [ 1; 0; 0 ]
+                }
+                {
+                    Name            "High Refresh Rate (144Hz+)"
+                    Description     "Ultra-smooth motion for gaming panels."
+                    Unlock          2014
+                    DevTime         5
+                    CodeArt         1
+                    Level           2
+                    Submarkets      [ 0; 3; 0 ]
+                }
+            ]
+        }
+    ]
+}

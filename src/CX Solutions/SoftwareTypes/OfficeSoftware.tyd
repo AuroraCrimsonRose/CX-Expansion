@@ -1,0 +1,112 @@
+SoftwareType
+{
+    Name            "Office Suite"
+    Description     "Applications for documents, spreadsheets, and presentations."
+    Random          0.1
+    IdealPrice      120
+    OptimalDevTime  45
+    OneClient       False
+    InHouse         False
+    Popularity      1.0
+    Retention       240
+    Iterative       0.8
+    Hardware        False
+    SubmarketNames  [ Text; Data; Presentation ]
+    NameGenerator   Software
+    Categories
+    [
+        {
+            Name            "Word Processor"
+            Description     "Focuses heavily on text editing and formatting."
+            Popularity      1.0
+            Retention       180
+            TimeScale       1
+            Iterative       0.85
+            Submarkets      [ 3; 0; 0 ]
+        }
+        {
+            Name            "Spreadsheet Software"
+            Description     "Data crunching, charts, and financial analysis."
+            Popularity      0.9
+            Retention       240
+            TimeScale       2
+            Iterative       0.85
+            Submarkets      [ 0; 3; 0 ]
+        }
+        {
+            Name            "Presentation Software"
+            Description     "Slideshows, transitions, and corporate decks."
+            Popularity      0.8
+            Retention       180
+            TimeScale       1
+            Iterative       0.85
+            Submarkets      [ 0; 0; 3 ]
+        }
+        {
+            Name            "Complete Office Suite"
+            Description     "The whole package for maximum productivity."
+            Popularity      1.0
+            Retention       240
+            TimeScale       3
+            Iterative       0.85
+            Submarkets      [ 1; 1; 1 ]
+        }
+    ]
+    Features
+    [
+        {
+            Name            "User Interface"
+            Spec            2D
+            DevTime         3
+            CodeArt         0.8
+            Submarkets      [ 1; 1; 1 ]
+            Features
+            [
+                {
+                    Name            "WYSIWYG Editor"
+                    Description     "What You See Is What You Get visual formatting."
+                    DevTime         3
+                    CodeArt         0.8
+                    Level           1
+                    Submarkets      [ 2; 0; 1 ]
+                }
+                {
+                    Name            "Ribbon Interface"
+                    Description     "Organizes complex features into intuitive tabs."
+                    Unlock          2007
+                    DevTime         4
+                    CodeArt         0.9
+                    Level           2
+                    Submarkets      [ 1; 1; 2 ]
+                }
+            ]
+        }
+        {
+            Name            "Advanced Functionality"
+            Spec            System
+            DevTime         4
+            CodeArt         1
+            Submarkets      [ 0; 2; 0 ]
+            Features
+            [
+                {
+                    Name            "Macro Scripting"
+                    Description     "Allows users to write scripts to automate tasks."
+                    DevTime         5
+                    CodeArt         1
+                    Level           2
+                    Submarkets      [ 0; 3; 0 ]
+                }
+                {
+                    Name            "Live Cloud Syncing"
+                    Description     "Save, edit, and collaborate seamlessly across the web."
+                    Unlock          2012
+                    DevTime         6
+                    CodeArt         1
+                    Level           3
+                    Submarkets      [ 1; 1; 1 ]
+                }
+            ]
+        }
+    ]
+}

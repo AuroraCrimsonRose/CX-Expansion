@@ -1,0 +1,124 @@
+SoftwareType
+{
+    Name            "Processor (CPU)"
+    Description     "The central processing unit of a computer."
+    Random          0.1
+    IdealPrice      250
+    OptimalDevTime  60
+    OneClient       False
+    InHouse         False
+    Popularity      1.0
+    Retention       240
+    Iterative       0.8
+    Hardware        True
+    Manufacturing
+    {
+        Components
+        [
+            {
+                Name            Plastic
+                BuiltInThumbnail Plastic
+                Price           5
+                Time            4
+            }
+        ]
+        Processes
+        [
+            {
+                Inputs          [ Plastic ]
+                Output          Final
+            }
+        ]
+        FinalTime       4
+    }
+    SubmarketNames  [ Performance; Efficiency; Multi-Tasking ]
+    NameGenerator   Software
+    Categories
+    [
+        {
+            Name            "Desktop CPU"
+            Description     "Standard high-power processor."
+            Popularity      1.0
+            Retention       240
+            TimeScale       3
+            Iterative       0.85
+            Submarkets      [ 3; 0; 1 ]
+        }
+        {
+            Name            "Mobile SoC (ARM)"
+            Description     "Low power System-on-a-Chip for mobile."
+            Unlock          1996
+            Popularity      1.0
+            Retention       120
+            TimeScale       4
+            Iterative       0.85
+            Submarkets      [ 0; 3; 1 ]
+        }
+        {
+            Name            "Server CPU"
+            Description     "Massive core counts for data centers."
+            Unlock          1995
+            Popularity      0.6
+            Retention       360
+            TimeScale       5
+            Iterative       0.85
+            Submarkets      [ 1; 0; 3 ]
+        }
+    ]
+    Features
+    [
+        {
+            Name            "Core Architecture"
+            Spec            Hardware
+            DevTime         6
+            CodeArt         1
+            Submarkets      [ 3; 1; 2 ]
+            Features
+            [
+                {
+                    Name            "Single Core Logic"
+                    Description     "Basic processing unit."
+                    DevTime         5
+                    CodeArt         1
+                    Level           1
+                    Submarkets      [ 1; 1; 0 ]
+                }
+                {
+                    Name            "Multi-Core Architecture"
+                    Description     "Multiple physical processing cores."
+                    Unlock          2005
+                    DevTime         7
+                    CodeArt         1
+                    Level           2
+                    Submarkets      [ 2; 0; 3 ]
+                }
+                {
+                    Name            "Integrated GPU (iGPU)"
+                    Description     "Basic graphics processing baked into the CPU die."
+                    Unlock          2010
+                    DevTime         6
+                    CodeArt         1
+                    Level           2
+                    Submarkets      [ 1; 3; 0 ]
+                }
+                {
+                    Name            "L1/L2 Cache"
+                    Description     "Ultra-fast on-die memory."
+                    DevTime         4
+                    CodeArt         1
+                    Level           1
+                    Submarkets      [ 2; 0; 0 ]
+                }
+                {
+                    Name            "Hyper-Threading"
+                    Description     "Simulates double the cores for logic processing."
+                    Unlock          2002
+                    DevTime         6
+                    CodeArt         1
+                    Level           3
+                    Submarkets      [ 3; 0; 3 ]
+                }
+            ]
+        }
+    ]
+}

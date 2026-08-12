@@ -1,0 +1,19 @@
+CompanyType
+{
+    Specialization      "Communication Technologies"
+    PerYear             0.2
+    Min                 5
+    Max                 20
+    Frameworks          True
+    Types
+    [
+        {
+            Software    "Communication App"
+            Chance      1
+        }
+        {
+            Software    "Web Browser"
+            Chance      1
+        }
+    ]
+}

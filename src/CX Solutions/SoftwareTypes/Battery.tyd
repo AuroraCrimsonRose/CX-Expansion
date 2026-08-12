@@ -1,0 +1,109 @@
+SoftwareType
+{
+    Name            "Battery"
+    Description     "Power storage for portable devices like laptops, cellphones, and handhelds."
+    Random          0.1
+    IdealPrice      30
+    OptimalDevTime  30
+    OneClient       False
+    InHouse         False
+    Popularity      1.0
+    Retention       180
+    Iterative       0.7
+    Hardware        True
+    Manufacturing
+    {
+        Components
+        [
+            {
+                Name            Plastic
+                BuiltInThumbnail Plastic
+                Price           5
+                Time            4
+            }
+        ]
+        Processes
+        [
+            {
+                Inputs          [ Plastic ]
+                Output          Final
+            }
+        ]
+        FinalTime       4
+    }
+    SubmarketNames  [ Capacity; Durability; Weight ]
+    NameGenerator   Software
+    Categories
+    [
+        {
+            Name            "Removable AA/AAA Pack"
+            Description     "Used for early handhelds like the Game Boy."
+            Popularity      0.7
+            Retention       120
+            TimeScale       1
+            Iterative       0.85
+            Submarkets      [ 1; 3; 0 ]
+        }
+        {
+            Name            "NiMH Battery"
+            Description     "Nickel-Metal Hydride for early laptops and cellphones."
+            Unlock          1989
+            Popularity      0.8
+            Retention       180
+            TimeScale       2
+            Iterative       0.85
+            Submarkets      [ 2; 2; 1 ]
+        }
+        {
+            Name            "Lithium-Ion (Li-ion)"
+            Description     "Modern standard battery chemistry."
+            Unlock          1991
+            Popularity      1.0
+            Retention       240
+            TimeScale       3
+            Iterative       0.85
+            Submarkets      [ 3; 1; 2 ]
+        }
+        {
+            Name            "Lithium-Polymer (LiPo)"
+            Description     "Thin, moldable, high-density batteries for modern smartphones."
+            Unlock          1997
+            Popularity      0.9
+            Retention       180
+            TimeScale       3
+            Iterative       0.85
+            Submarkets      [ 2; 0; 3 ]
+        }
+    ]
+    Features
+    [
+        {
+            Name            "Battery Tech"
+            Spec            Hardware
+            DevTime         3
+            CodeArt         1
+            Submarkets      [ 1; 1; 1 ]
+            Features
+            [
+                {
+                    Name            "Fast Charging"
+                    Description     "High wattage input for rapid top-ups."
+                    Unlock          2012
+                    DevTime         5
+                    CodeArt         1
+                    Level           2
+                    Submarkets      [ 2; 0; 0 ]
+                }
+                {
+                    Name            "Wireless Charging Coil"
+                    Description     "Inductive charging support."
+                    Unlock          2015
+                    DevTime         4
+                    CodeArt         1
+                    Level           2
+                    Submarkets      [ 1; 0; 1 ]
+                }
+            ]
+        }
+    ]
+}

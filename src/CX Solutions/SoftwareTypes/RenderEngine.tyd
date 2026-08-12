@@ -1,0 +1,116 @@
+SoftwareType
+{
+    Name            "Render Engine"
+    Description     "The core graphics software component that draws 2D and 3D images to the screen. Crucial for Game Engines."
+    Random          0.1
+    IdealPrice      90
+    OptimalDevTime  50
+    OneClient       False
+    InHouse         False
+    Popularity      0.8
+    Retention       360
+    Iterative       0.8
+    Hardware        False
+    SubmarketNames  [ Realism; Performance; Ease of Use ]
+    NameGenerator   Software
+    Categories
+    [
+        {
+            Name            "2D Sprite Engine"
+            Description     "Draws flat 2D images and handles basic collision."
+            Popularity      0.9
+            Retention       180
+            TimeScale       2
+            Iterative       0.85
+            Submarkets      [ 0; 3; 3 ]
+        }
+        {
+            Name            "3D Rasterization Engine"
+            Description     "Projects 3D polygons onto a 2D screen. The standard for most games."
+            Unlock          1994
+            Popularity      1.0
+            Retention       240
+            TimeScale       4
+            Iterative       0.85
+            Submarkets      [ 2; 2; 1 ]
+        }
+        {
+            Name            "Path-Tracing Engine"
+            Description     "Simulates physical light rays for photorealistic reflections and shadows."
+            Unlock          2018
+            Popularity      0.6
+            Retention       360
+            TimeScale       5
+            Iterative       0.85
+            Submarkets      [ 3; 0; 0 ]
+        }
+    ]
+    Features
+    [
+        {
+            Name            "Graphics Capabilities"
+            Spec            3D
+            DevTime         4
+            CodeArt         1
+            Submarkets      [ 3; 1; 0 ]
+            Features
+            [
+                {
+                    Name            "Lighting & Shadows"
+                    Description     "Dynamic light sources and realistic shading."
+                    Unlock          1995
+                    DevTime         3
+                    CodeArt         1
+                    Level           1
+                    Submarkets      [ 3; 1; 0 ]
+                }
+                {
+                    Name            "Particle System"
+                    Description     "Generates smoke, fire, and weather effects."
+                    Unlock          1998
+                    DevTime         3
+                    CodeArt         1
+                    Level           2
+                    Submarkets      [ 2; 0; 1 ]
+                }
+                {
+                    Name            "Skeletal Animation"
+                    Description     "Bone-based rigs for fluid character movement."
+                    Unlock          1999
+                    DevTime         4
+                    CodeArt         1
+                    Level           2
+                    Submarkets      [ 2; 1; 1 ]
+                }
+            ]
+        }
+        {
+            Name            "Physics & Simulation"
+            Spec            System
+            DevTime         3
+            CodeArt         1
+            Submarkets      [ 2; 1; 2 ]
+            Features
+            [
+                {
+                    Name            "Rigid Body Physics"
+                    Description     "Simulates gravity, friction, and solid collisions."
+                    Unlock          2000
+                    DevTime         4
+                    CodeArt         1
+                    Level           1
+                    Submarkets      [ 2; 1; 1 ]
+                }
+                {
+                    Name            "Soft Body & Cloth"
+                    Description     "Deformable materials and wind simulation."
+                    Unlock          2006
+                    DevTime         5
+                    CodeArt         1
+                    Level           2
+                    Submarkets      [ 3; 0; 0 ]
+                }
+            ]
+        }
+    ]
+}

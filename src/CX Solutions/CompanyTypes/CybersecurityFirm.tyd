@@ -1,0 +1,26 @@
+CompanyType
+{
+	Specialization		"Cybersecurity Firm"
+	PerYear				0.15
+	Min					3
+	Max					8
+    Frameworks          False
+	Types
+		[
+			{
+			Software	"Antivirus Software"
+			Chance		1
+			Force		False
+			}
+			{
+			Software	"Identity Management"
+			Chance		1
+			Force		False
+			}
+			{
+			Software	"VPN Client"
+			Chance		1
+			Force		False
+			}
+		]
+}

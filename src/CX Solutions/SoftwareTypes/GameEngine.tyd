@@ -1,0 +1,95 @@
+SoftwareType
+{
+    Name            "Game Engine"
+    Description     "A suite of tools for game development. Export as a framework to power the world's games and collect royalties!"
+    Unlock          1985
+    Random          0.05
+    IdealPrice      200
+    OptimalDevTime  36
+    OneClient       False
+    InHouse         True
+    Popularity      0.5
+    Retention       120
+    Iterative       0.85
+    SubmarketNames  [ Physics; Rendering; Tooling ]
+    NameGenerator   Database
+    Categories
+    [
+        {
+            Name            "2D Engine"
+            Description     "Perfect for lightweight, platformer, or retro games."
+            Popularity      0.8
+            Retention       120
+            TimeScale       2
+            Iterative       0.85
+            Submarkets      [ 1; 2; 3 ]
+        }
+        {
+            Name            "3D Engine"
+            Description     "High-end 3D graphics and heavy physics simulation."
+            Unlock          1992
+            Popularity      1.0
+            Retention       120
+            TimeScale       4
+            Iterative       0.85
+            Submarkets      [ 3; 3; 1 ]
+        }
+    ]
+    Features
+    [
+        {
+            Name            "Rendering System"
+            Spec            2D
+            DevTime         5
+            CodeArt         1
+            Submarkets      [ 0; 3; 0 ]
+            Features
+            [
+                {
+                    Name            "Lighting & Shadows"
+                    Description     "Dynamic lighting and shadows for realism."
+                    DevTime         4
+                    CodeArt         1
+                    Level           1
+                    Submarkets      [ 0; 3; 0 ]
+                }
+                {
+                    Name            "Particle System"
+                    Description     "Fire, smoke, and explosions."
+                    Unlock          1994
+                    DevTime         3
+                    CodeArt         1
+                    Level           2
+                    Submarkets      [ 0; 2; 1 ]
+                }
+            ]
+        }
+        {
+            Name            "Physics & Logic"
+            Spec            System
+            DevTime         5
+            CodeArt         1
+            Submarkets      [ 3; 0; 0 ]
+            Features
+            [
+                {
+                    Name            "Collision Detection"
+                    Description     "Basic hitboxes and movement physics."
+                    DevTime         3
+                    CodeArt         1
+                    Level           1
+                    Submarkets      [ 3; 0; 0 ]
+                }
+                {
+                    Name            "Ragdoll Physics"
+                    Description     "Realistic procedural death animations."
+                    Unlock          1998
+                    DevTime         4
+                    CodeArt         1
+                    Level           2
+                    Submarkets      [ 3; 0; 1 ]
+                }
+            ]
+        }
+    ]
+}
