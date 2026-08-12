@@ -26,6 +26,18 @@
     }
     SubmarketNames  [ Performance; Usability; Quality ]
     NameGenerator   Hardware
+    Categories
+    [
+        {
+            Name            "Standard Phone"
+            Description     "A standard Phone device."
+            Popularity      1.0
+            Retention       360
+            TimeScale       1
+            Iterative       0.85
+            Submarkets      [ 1; 1; 1 ]
+        }
+    ]
     Features
     [
         {
@@ -49,4 +61,5 @@
         }
     ]
 }
+
 
