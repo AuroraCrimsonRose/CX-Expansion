@@ -12,4 +12,4 @@ legacy/*
 *.py
 
 # ignore js
-scratch.js
+*.js
