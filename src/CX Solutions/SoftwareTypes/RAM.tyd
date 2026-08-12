@@ -46,7 +46,7 @@ SoftwareType
         }
         {
             Name            "Laptop SO-DIMM"
-            Description     "Smaller memory for portables."
+            Description     "Compact memory module for portable computers."
             Unlock          1997
             Popularity      0.8
             Retention       180
@@ -55,24 +55,14 @@ SoftwareType
             Submarkets      [ 1; 2; 1 ]
         }
         {
-            Name            "Mobile LPDDR (Soldered)"
-            Description     "Low power embedded RAM for phones and tablets."
-            Unlock          2002
+            Name            "Embedded RAM Module"
+            Description     "Directly soldered memory for phones, consoles, and integrated systems."
+            Unlock          1994
             Popularity      1.0
             Retention       120
             TimeScale       1
             Iterative       0.85
-            Submarkets      [ 1; 2; 1 ]
-        }
-        {
-            Name            "Embedded / Unified RAM"
-            Description     "Soldered RAM for consoles, SBCs, and Smart TVs."
-            Unlock          1994
-            Popularity      0.8
-            Retention       180
-            TimeScale       2
-            Iterative       0.85
-            Submarkets      [ 2; 1; 1 ]
+            Submarkets      [ 1; 1; 2 ]
         }
     ]
     Features
@@ -86,30 +76,40 @@ SoftwareType
             Features
             [
                 {
-                    Name            "Memory Chips (DRAM)"
-                    Description     "The silicon chips storing the data."
-                    DevTime         4
+                    Name            "Dynamic RAM (DRAM)"
+                    Description     "Standard volatile memory cells."
+                    DevTime         3
                     CodeArt         1
                     Level           1
                     Submarkets      [ 0; 3; 0 ]
                 }
                 {
-                    Name            "Heatsink / RGB"
-                    Description     "Cooling solutions and fancy lights."
-                    Unlock          2010
-                    DevTime         2
+                    Name            "Double Data Rate (DDR)"
+                    Description     "Advanced bus signaling that transfers data on both edges of the clock signal."
+                    Unlock          1998
+                    DevTime         4
                     CodeArt         1
                     Level           2
-                    Submarkets      [ 1; 0; 0 ]
+                    DependsOn       "Dynamic RAM (DRAM)"
+                    Submarkets      [ 3; 1; 0 ]
                 }
                 {
-                    Name            "ECC Logic"
-                    Description     "Error-correcting code for server stability."
+                    Name            "Error-Correcting Code (ECC)"
+                    Description     "Hardware logic to detect and correct memory corruption, essential for servers."
                     Unlock          1995
                     DevTime         4
                     CodeArt         1
                     Level           2
                     Submarkets      [ 0; 0; 3 ]
+                }
+                {
+                    Name            "Thermal Heat Spreader"
+                    Description     "Metal casing to dissipate heat from high-speed memory modules."
+                    Unlock          2010
+                    DevTime         2
+                    CodeArt         1
+                    Level           1
+                    Submarkets      [ 1; 0; 1 ]
                 }
             ]
         }

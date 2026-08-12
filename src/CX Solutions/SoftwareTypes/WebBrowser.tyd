@@ -138,6 +138,7 @@ SoftwareType
                     DevTime         5
                     CodeArt         1
                     Level           2
+                    FrameworkRequirement "Cloud Storage"
                     Submarkets      [ 1; 2; 0 ]
                 }
                 {
@@ -147,6 +148,7 @@ SoftwareType
                     DevTime         4
                     CodeArt         1
                     Level           3
+                    FrameworkRequirement "VPN Client"
                     Submarkets      [ 3; 0; 1 ]
                     Server          0.0002
                 }

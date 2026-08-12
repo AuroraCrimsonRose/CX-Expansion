@@ -126,6 +126,7 @@ SoftwareType
                     DevTime         2
                     CodeArt         1
                     Level           1
+                    FrameworkRequirement "Ad Network"
                     Submarkets      [ 0; 0; 0 ]
                 }
                 {
@@ -162,6 +163,7 @@ SoftwareType
                     DevTime         6
                     CodeArt         1
                     Level           2
+                    FrameworkRequirement "Database Software"
                     Submarkets      [ 2; 1; 0 ]
                     Server          0.0005
                 }

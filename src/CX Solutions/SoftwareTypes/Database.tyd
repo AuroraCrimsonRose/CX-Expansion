@@ -211,6 +211,7 @@ SoftwareType
                     DevTime         5
                     CodeArt         1
                     Level           2
+                    FrameworkRequirement "Cloud Storage"
                     Submarkets      [ 0; 0; 3 ]
                 }
                 {

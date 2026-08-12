@@ -5,3 +5,8 @@
 # Ignore legacy items
 legacy/*
 /legacy
+
+# ignore python
+.venv/*
+/.venv
+*.py

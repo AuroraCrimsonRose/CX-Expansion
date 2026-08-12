@@ -58,7 +58,7 @@ SoftwareType
     Features
     [
         {
-            Name            "Graphics Processing"
+            Name            "Graphics Architecture"
             Spec            Hardware
             DevTime         5
             CodeArt         1
@@ -66,16 +66,35 @@ SoftwareType
             Features
             [
                 {
-                    Name            "Rasterization Cores"
-                    Description     "Basic 3D drawing capabilities."
+                    Name            "2D Acceleration"
+                    Description     "Basic hardware acceleration for drawing windows and text."
+                    DevTime         3
+                    CodeArt         1
+                    Level           1
+                    Submarkets      [ 1; 0; 0 ]
+                }
+                {
+                    Name            "3D Acceleration"
+                    Description     "Fixed-function pipeline for rendering polygons."
+                    Unlock          1993
                     DevTime         5
                     CodeArt         1
                     Level           1
                     Submarkets      [ 3; 0; 0 ]
                 }
                 {
-                    Name            "Ray-Tracing Cores"
-                    Description     "Advanced lighting simulation hardware."
+                    Name            "Programmable Shaders"
+                    Description     "Allows custom code to run on the pixel and vertex pipelines, enabling advanced visual effects."
+                    Unlock          2001
+                    DevTime         6
+                    CodeArt         1
+                    Level           2
+                    DependsOn       "3D Acceleration"
+                    Submarkets      [ 3; 2; 2 ]
+                }
+                {
+                    Name            "Hardware Ray Tracing"
+                    Description     "Dedicated silicon for advanced lighting and reflection simulation."
                     Unlock          2018
                     DevTime         7
                     CodeArt         1
@@ -100,66 +119,48 @@ SoftwareType
                     Submarkets      [ 2; 2; 0 ]
                 }
                 {
-                    Name            "Advanced Heatsink & Fans"
-                    Description     "Massive cooling solutions to prevent throttling."
-                    DevTime         3
-                    CodeArt         1
-                    Level           2
-                    Submarkets      [ 0; 0; 3 ]
-                }
-                {
                     Name            "GDDR VRAM Speeds"
                     Description     "Dedicated high-speed GDDR memory."
                     Unlock          2000
                     DevTime         4
                     CodeArt         1
                     Level           2
+                    DependsOn       "VRAM Modules"
                     Submarkets      [ 0; 2; 1 ]
                 }
                 {
-                    Name            "CUDA Cores"
-                    Description     "Massively parallel compute architecture."
-                    Unlock          2007
-                    DevTime         6
+                    Name            "Advanced Cooling Solution"
+                    Description     "Massive heatsinks and fans to prevent thermal throttling."
+                    DevTime         3
                     CodeArt         1
-                    Level           3
-                    Submarkets      [ 0; 3; 2 ]
+                    Level           2
+                    Submarkets      [ 0; 0; 3 ]
                 }
-            ]
-        }
-        {
-            Name            "Display Standards"
-            Spec            2D
-            DevTime         3
-            CodeArt         1
-            Submarkets      [ 1; 2; 0 ]
-            Features
-            [
                 {
-                    Name            "MDA / CGA / Hercules"
-                    Description     "Early monochrome and 4-color graphics."
+                    Name            "Analog Video (VGA)"
+                    Description     "Standard analog signal output."
                     DevTime         2
                     CodeArt         1
                     Level           1
                     Submarkets      [ 1; 0; 2 ]
                 }
                 {
-                    Name            "VGA / SVGA"
-                    Description     "Standard 256-color and high-res outputs."
-                    Unlock          1987
+                    Name            "Digital Visual Interface (DVI)"
+                    Description     "Uncompressed digital video signal."
+                    Unlock          1999
+                    DevTime         3
+                    CodeArt         1
+                    Level           2
+                    Submarkets      [ 2; 1; 0 ]
+                }
+                {
+                    Name            "High-Definition Interface (HDMI)"
+                    Description     "Digital audio/video interface standard."
+                    Unlock          2003
                     DevTime         4
                     CodeArt         1
                     Level           2
-                    Submarkets      [ 2; 3; 0 ]
-                }
-                {
-                    Name            "DVI / HDMI"
-                    Description     "Digital video and audio signals."
-                    Unlock          1999
-                    DevTime         5
-                    CodeArt         1
-                    Level           2
-                    Submarkets      [ 2; 3; 0 ]
+                    Submarkets      [ 2; 2; 0 ]
                 }
                 {
                     Name            "DisplayPort"

@@ -45,8 +45,8 @@ SoftwareType
             Submarkets      [ 3; 0; 1 ]
         }
         {
-            Name            "Mobile SoC (ARM)"
-            Description     "Low power System-on-a-Chip for mobile."
+            Name            "Mobile SoC"
+            Description     "Low power System-on-a-Chip designed for mobile devices."
             Unlock          1996
             Popularity      1.0
             Retention       120
@@ -56,7 +56,7 @@ SoftwareType
         }
         {
             Name            "Server CPU"
-            Description     "Massive core counts for data centers."
+            Description     "Massive core counts and high reliability for data centers."
             Unlock          1995
             Popularity      0.6
             Retention       360
@@ -68,7 +68,7 @@ SoftwareType
     Features
     [
         {
-            Name            "Core Architecture"
+            Name            "Processor Architecture"
             Spec            Hardware
             DevTime         6
             CodeArt         1
@@ -76,21 +76,74 @@ SoftwareType
             Features
             [
                 {
-                    Name            "Single Core Logic"
-                    Description     "Basic processing unit."
-                    DevTime         5
+                    Name            "CISC Architecture (x86)"
+                    Description     "Complex Instruction Set. High performance, higher power draw."
+                    DevTime         4
                     CodeArt         1
                     Level           1
-                    Submarkets      [ 1; 1; 0 ]
+                    Submarkets      [ 3; 0; 1 ]
                 }
                 {
-                    Name            "Multi-Core Architecture"
-                    Description     "Multiple physical processing cores."
+                    Name            "RISC Architecture (ARM)"
+                    Description     "Reduced Instruction Set. Highly power efficient."
+                    Unlock          1985
+                    DevTime         4
+                    CodeArt         1
+                    Level           1
+                    Submarkets      [ 0; 3; 0 ]
+                }
+                {
+                    Name            "Open ISA (RISC-V)"
+                    Description     "Open standard instruction set architecture."
+                    Unlock          2010
+                    DevTime         5
+                    CodeArt         1
+                    Level           2
+                    Submarkets      [ 1; 2; 1 ]
+                }
+                {
+                    Name            "Multi-Core Processing"
+                    Description     "Multiple physical processing cores on a single die."
                     Unlock          2005
                     DevTime         7
                     CodeArt         1
                     Level           2
                     Submarkets      [ 2; 0; 3 ]
+                }
+                {
+                    Name            "Advanced Thread Scheduling"
+                    Description     "Simulates additional logical cores for parallel execution (e.g., Hyper-Threading/SMT)."
+                    Unlock          2002
+                    DevTime         6
+                    CodeArt         1
+                    Level           3
+                    Submarkets      [ 3; 0; 3 ]
+                }
+                {
+                    Name            "Advanced Instruction Sets (SIMD)"
+                    Description     "Hardware acceleration for vector math and multimedia (e.g., MMX/SSE/AVX)."
+                    Unlock          1997
+                    DevTime         5
+                    CodeArt         1
+                    Level           2
+                    Submarkets      [ 3; 0; 0 ]
+                }
+                {
+                    Name            "Hardware Virtualization"
+                    Description     "Native silicon support for running virtual machines efficiently."
+                    Unlock          2005
+                    DevTime         5
+                    CodeArt         1
+                    Level           2
+                    Submarkets      [ 1; 0; 3 ]
+                }
+                {
+                    Name            "On-Die CPU Cache"
+                    Description     "Ultra-fast memory integrated directly onto the processor die."
+                    DevTime         4
+                    CodeArt         1
+                    Level           1
+                    Submarkets      [ 2; 0; 0 ]
                 }
                 {
                     Name            "Integrated GPU (iGPU)"
@@ -100,23 +153,6 @@ SoftwareType
                     CodeArt         1
                     Level           2
                     Submarkets      [ 1; 3; 0 ]
-                }
-                {
-                    Name            "L1/L2 Cache"
-                    Description     "Ultra-fast on-die memory."
-                    DevTime         4
-                    CodeArt         1
-                    Level           1
-                    Submarkets      [ 2; 0; 0 ]
-                }
-                {
-                    Name            "Hyper-Threading"
-                    Description     "Simulates double the cores for logic processing."
-                    Unlock          2002
-                    DevTime         6
-                    CodeArt         1
-                    Level           3
-                    Submarkets      [ 3; 0; 3 ]
                 }
             ]
         }

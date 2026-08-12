@@ -18,6 +18,7 @@ SoftwareType
             { Name "Plastic"; BuiltInThumbnail Plastic; Price 2; Time 2 }
             { Name "Lithium"; BuiltInThumbnail Metal; Price 5; Time 4 }
             { Name "Copper"; BuiltInThumbnail Metal; Price 3; Time 3 }
+            { Name "Battery Cells"; BuiltInThumbnail Metal; Price 5; Time 4 }
         ]
         Processes
         [

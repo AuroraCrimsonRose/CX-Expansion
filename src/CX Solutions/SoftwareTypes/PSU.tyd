@@ -66,8 +66,8 @@ SoftwareType
             Features
             [
                 {
-                    Name            "Unrated / Cheap Capacitors"
-                    Description     "Extremely low quality. Massive bug rate representing a potential fire hazard."
+                    Name            "Basic Capacitors"
+                    Description     "Extremely cheap and low quality. Represents a potential reliability hazard."
                     DevTime         1
                     CodeArt         1
                     Level           1
@@ -84,7 +84,7 @@ SoftwareType
                 }
                 {
                     Name            "80-Plus Gold"
-                    Description     "High efficiency and high-quality Japanese capacitors."
+                    Description     "High efficiency and high-quality internal capacitors."
                     Unlock          2008
                     DevTime         5
                     CodeArt         1

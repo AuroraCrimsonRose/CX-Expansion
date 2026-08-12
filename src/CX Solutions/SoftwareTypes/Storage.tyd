@@ -36,18 +36,8 @@ SoftwareType
     Categories
     [
         {
-            Name            "Floppy Drive"
-            Description     "5.25 and 3.5 inch magnetic disk drives."
-            Popularity      0.8
-            Retention       120
-            TimeScale       1
-            Iterative       0.85
-            Submarkets      [ 1; 1; 3 ]
-        }
-        {
-            Name            "Hard Disk Drive (HDD)"
-            Description     "Magnetic platters with massive capacity."
-            Unlock          1985
+            Name            "3.5\" Hard Drive"
+            Description     "Standard full-size desktop storage drive."
             Popularity      1.0
             Retention       240
             TimeScale       2
@@ -55,22 +45,22 @@ SoftwareType
             Submarkets      [ 3; 1; 2 ]
         }
         {
-            Name            "Solid State Hybrid (SSHD)"
-            Description     "HDD with a small flash cache."
-            Unlock          2007
-            Popularity      0.6
-            Retention       120
+            Name            "2.5\" Laptop Drive"
+            Description     "Compact drive for laptops and small form factors."
+            Unlock          1988
+            Popularity      0.8
+            Retention       180
             TimeScale       2
             Iterative       0.85
-            Submarkets      [ 2; 2; 1 ]
+            Submarkets      [ 2; 2; 2 ]
         }
         {
-            Name            "Solid State Drive (SSD)"
-            Description     "Flash storage with no moving parts."
+            Name            "M.2 / Embedded Module"
+            Description     "Directly mounted storage module for modern devices."
             Unlock          2010
-            Popularity      1.0
-            Retention       180
-            TimeScale       3
+            Popularity      0.9
+            Retention       120
+            TimeScale       2
             Iterative       0.85
             Submarkets      [ 1; 3; 2 ]
         }
@@ -78,33 +68,71 @@ SoftwareType
     Features
     [
         {
-            Name            "Storage Interface"
+            Name            "Storage Medium"
             Spec            Hardware
             DevTime         4
             CodeArt         1
-            Submarkets      [ 1; 2; 1 ]
+            Submarkets      [ 1; 1; 1 ]
             Features
             [
                 {
-                    Name            "Legacy IDE"
-                    Description     "Wide ribbon cables for data."
+                    Name            "Magnetic Storage"
+                    Description     "Spinning magnetic platters."
                     DevTime         3
                     CodeArt         1
                     Level           1
-                    Submarkets      [ 1; 0; 2 ]
+                    Submarkets      [ 3; 0; 1 ]
+                }
+                {
+                    Name            "High-Density Magnetic Storage"
+                    Description     "Advanced techniques like SMR or Helium-filled drives."
+                    Unlock          2012
+                    DevTime         4
+                    CodeArt         1
+                    Level           2
+                    DependsOn       "Magnetic Storage"
+                    Submarkets      [ 3; 0; 0 ]
+                }
+                {
+                    Name            "Solid State NAND"
+                    Description     "Flash memory with no moving parts."
+                    Unlock          1995
+                    DevTime         5
+                    CodeArt         1
+                    Level           2
+                    Submarkets      [ 0; 2; 2 ]
+                }
+                {
+                    Name            "3D NAND"
+                    Description     "Stacked flash cells for vastly improved density and durability."
+                    Unlock          2013
+                    DevTime         6
+                    CodeArt         1
+                    Level           3
+                    DependsOn       "Solid State NAND"
+                    Submarkets      [ 2; 2; 2 ]
+                }
+                {
+                    Name            "Legacy IDE"
+                    Description     "Parallel data transfer interface."
+                    DevTime         2
+                    CodeArt         1
+                    Level           1
+                    SoftwareCategories [ "3.5\" Hard Drive"; "2.5\" Laptop Drive" ]
+                    Submarkets      [ 0; 0; 1 ]
                 }
                 {
                     Name            "SATA Interface"
                     Description     "Serial data transfer for higher speeds."
                     Unlock          2000
-                    DevTime         5
+                    DevTime         4
                     CodeArt         1
                     Level           2
-                    Submarkets      [ 1; 3; 1 ]
+                    Submarkets      [ 0; 2; 1 ]
                 }
                 {
-                    Name            "NVMe (PCIe)"
-                    Description     "Direct motherboard connection for blisteringly fast speeds."
+                    Name            "NVMe Controller"
+                    Description     "Designed for PCIe attached storage. (Implicit historical dependency on PCIe availability)"
                     Unlock          2013
                     DevTime         6
                     CodeArt         1
