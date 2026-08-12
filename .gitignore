@@ -10,3 +10,6 @@ legacy/*
 .venv/*
 /.venv
 *.py
+
+# ignore js
+scratch.js

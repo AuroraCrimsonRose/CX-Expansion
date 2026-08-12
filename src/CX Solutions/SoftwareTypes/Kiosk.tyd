@@ -1,0 +1,50 @@
+﻿SoftwareType
+{
+    Name            "Kiosk"
+    Description     "An embedded kiosk or ATM assembled from components."
+    Random          0.1
+    IdealPrice      500
+    OptimalDevTime  60
+    OneClient       False
+    InHouse         False
+    Popularity      1.0
+    Retention       360
+    Iterative       0.85
+    Hardware        True
+    Manufacturing
+    {
+        Components
+        [
+            { Name Plastic; BuiltInThumbnail Plastic; Price 10; Time 8 }
+            { Name Metal; BuiltInThumbnail Metal; Price 20; Time 12 }
+        ]
+        Processes
+        [
+            { Inputs [ Plastic; Metal ]; Output Final }
+        ]
+        FinalTime       8
+    }
+    SubmarketNames  [ Performance; Usability; Quality ]
+    NameGenerator   Hardware
+    Features
+    [
+        {
+            Name            "Device Assembly"
+            Spec            Hardware
+            DevTime         5
+            CodeArt         1
+            Submarkets      [ 1; 1; 1 ]
+            Features
+            [
+                { Name "Processor (CPU)"; FrameworkRequirement "Processor (CPU)"; Level 1; DevTime 2; CodeArt 1; Submarkets [ 1; 1; 1 ] }
+                { Name "Motherboard"; FrameworkRequirement "Motherboard"; Level 1; DevTime 2; CodeArt 1; Submarkets [ 1; 1; 1 ] }
+                { Name "Memory (RAM)"; FrameworkRequirement "Memory (RAM)"; Level 1; DevTime 2; CodeArt 1; Submarkets [ 1; 1; 1 ] }
+                { Name "Data Storage"; FrameworkRequirement "Data Storage"; Level 1; DevTime 2; CodeArt 1; Submarkets [ 1; 1; 1 ] }
+                { Name "Power Supply (PSU)"; FrameworkRequirement "Power Supply (PSU)"; Level 1; DevTime 2; CodeArt 1; Submarkets [ 1; 1; 1 ] }
+                { Name "Display Panel"; FrameworkRequirement "Display Panel"; Level 1; DevTime 2; CodeArt 1; Submarkets [ 1; 1; 1 ] }
+                { Name "Device Case"; FrameworkRequirement "Device Case"; Level 1; DevTime 2; CodeArt 1; Submarkets [ 1; 1; 1 ] }
+                { Name "Operating System"; FrameworkRequirement "Operating System"; Level 1; DevTime 2; CodeArt 1; Submarkets [ 1; 1; 1 ] }
+            ]
+        }
+    ]
+}

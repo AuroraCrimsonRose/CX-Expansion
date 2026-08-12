@@ -1,4 +1,4 @@
-SoftwareType
+﻿SoftwareType
 {
     Name            "Operating System"
     Description     "The master software that dictates hardware compatibility. Advanced features require a Kernel!"
@@ -43,30 +43,6 @@ SoftwareType
             TimeScale       2
             Iterative       0.85
             Submarkets      [ 2; 2; 1 ]
-            Hardware	True
-            Manufacturing
-            {
-                Components
-                [
-                    { Name "Touch sensor"; BuiltInThumbnail Touch; Price 50; Time 8; DependsOn "Touch" }
-                    { Name "Vibration"; BuiltInThumbnail Vibration; Price 10; Time 4; DependsOn "Vibration" }
-                    { Name Screen; BuiltInThumbnail LCD; Price 40; Time 8 }
-                    { Name Controller; BuiltInThumbnail Microchip; Price 100; Time 16 }
-                    { Name Motherboard; BuiltInThumbnail PCB; Price 10; Time 8 }
-                    { Name "Fingerprint scanner"; BuiltInThumbnail Fingerprint; Price 10; Time 16; DependsOn "Fingerprint scanner" }
-                    { Name Plastic; BuiltInThumbnail Plastic; Price 5; Time 4 }
-                    { Name Case; BuiltInThumbnail Phone; Price 5; Time 4 }
-                ]
-                Processes
-                [
-                    { Inputs [ "Touch sensor" ]; Output Screen }
-                    { Inputs [ "Vibration"; "Screen"; "Controller" ]; Output Motherboard }
-                    { Inputs [ "Plastic"; "Fingerprint scanner" ]; Output Case }
-                    { Inputs [ "Motherboard"; "Case" ]; Output Final }
-                ]
-                FinalTime	16
-                Design		[ "CellPhone"; [ "SmartPhone" ; 2000 ] ]
-            }
         }
         {
             Name            "Tablet"
@@ -87,27 +63,6 @@ SoftwareType
             TimeScale       2
             Iterative       0.85
             Submarkets      [ 3; 1; 1 ]
-            Hardware	True
-            Manufacturing
-            {
-                Components
-                [
-                    { Name Plastic; BuiltInThumbnail Plastic; Price 10; Time 8 }
-                    { Name Motherboard; BuiltInThumbnail PCB; Price 10; Time 8 }
-                    { Name "Drive bay"; BuiltInThumbnail Harddrive; Price 10; Time 8; DependsOn "Removable drive" }
-                    { Name Controller; BuiltInThumbnail Microchip; Price 40; Time 16 }
-                    { Name Case; BuiltInThumbnail Console; Price 5; Time 8 }
-                    { Name "Device input"; BuiltInThumbnail USB; Price 10; Time 4; DependsOn "Standardized input" }
-                ]
-                Processes
-                [
-                    { Inputs [ "Controller"; "Device input" ]; Output Motherboard }
-                    { Inputs [ "Plastic"; "Drive bay" ]; Output Case }
-                    { Inputs [ "Motherboard"; "Case" ]; Output Final }
-                ]
-                FinalTime	4
-                Design		[ "Console"; "OldConsole" ]
-            }
         }
         {
             Name            "Handheld"
@@ -600,63 +555,5 @@ SoftwareType
             ]
         }
     ]
-    AddOns
-    [
-        {
-        Name           "Joystick"
-        NameGenerator  Joystick
-        IdealPrice     100
-        OptimalDevTime 8
-        Retention      6
-        Categories     "Console"
-        Forced         0.4
-        PerUser        2
-        Manufacturing
-            {
-            Components
-                [
-                    { Name Gyroscope; BuiltInThumbnail Gyroscope; Price 10; Time 4; DependsOn "Motion detection" }
-                    { Name "Rumble unit"; BuiltInThumbnail Vibration; Price 5; Time 2; DependsOn "Vibration" }
-                    { Name Plastic; BuiltInThumbnail Plastic; Price 5; Time 2 }
-                    { Name Speaker; BuiltInThumbnail Speaker; Price 2; Time 2; DependsOn "Built-in speaker" }
-                    { Name LED; BuiltInThumbnail LED; Price 2; Time 2; DependsOn "RGB Lighting" }
-                    { Name Motherboard; BuiltInThumbnail PCB; Price 5; Time 4 }
-                    { Name Controller; BuiltInThumbnail Microchip; Price 15; Time 8 }
-                    { Name Case; BuiltInThumbnail Joystick; Price 5; Time 4 }
-                ]
-            Processes
-                [
-                    { Inputs [ "Controller"; "Gyroscope"; "Speaker" ]; Output Motherboard }
-                    { Inputs [ "Rumble unit"; "Plastic"; "LED" ]; Output Case }
-                    { Inputs [ "Motherboard"; "Case" ]; Output Final }
-                ]
-            FinalTime   4
-            Design      "TestJoystick"
-            }
-        BaseFeature
-            {
-            Spec       Hardware
-            DevTime    4
-            CodeArt    1
-            Submarkets [ 1; 4; 1 ]
-            }
-        Features
-            [
-                                {
-                Name       "Wireless"
-                Spec       "Hardware"
-                DevTime    0.15
-                Level      2
-                CodeArt    1
-                Submarkets [ 3; 0; 0 ]
-                DependsOn  "Wireless communication"
-                FrameworkRequirement "Battery"
-                }
-                { Name "Vibration"; Description "Device go brrr"; Spec Hardware; DevTime 0.5; Level 1; CodeArt 1; Submarkets [ 1; 0; 3 ] }
-                { Name "Motion detection"; Description "Who doesn't want joysticks embedded in their TVs?"; Spec Hardware; DevTime 0.25; Level 2; CodeArt 1; Submarkets [ 1; 0; 1 ] }
-                { Name "Built-in speaker"; Spec Hardware; DevTime 0.25; Level 1; CodeArt 1; Submarkets [ 1; 0; 3 ]; DependsOn "Standardized input" }
-                { Name "RGB Lighting"; Spec Hardware; MaxFactor 3; DevTime 0.1; Level 1; CodeArt 1; Submarkets [ 0; 0; 1 ]; DependsOn "Standardized input"; AmountScript "LocalizePlural('LightStrip', x)" }
-            ]
-        }
-    ]
-}
+    }
+

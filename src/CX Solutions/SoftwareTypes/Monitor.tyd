@@ -78,6 +78,14 @@ SoftwareType
     Features
     [
         {
+            Name            "Display Panel"
+            Spec            Hardware
+            Features
+            [
+                { Name "Display Panel"; FrameworkRequirement "Display Panel"; Level 1 }
+            ]
+        }
+        {
             Name            "Monitor Electronics"
             Spec            Hardware
             DevTime         4
@@ -107,3 +115,4 @@ SoftwareType
         }
     ]
 }
+
