@@ -85,11 +85,12 @@ SoftwareType
                 {
                     Name            "Zero-Day Protection"
                     Description     "Advanced AI to block brand new exploits immediately."
-                    Unlock          2012
+                    Unlock          2020
                     DevTime         6
                     CodeArt         1
                     Level           2
                     Submarkets      [ 3; 0; 0 ]
+                    FrameworkRequirement "AI Services"
                 }
             ]
         }

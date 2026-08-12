@@ -15,93 +15,129 @@ SoftwareType
     {
         Components
         [
-            {
-                Name            Plastic
-                BuiltInThumbnail Plastic
-                Price           5
-                Time            4
-            }
+            { Name "Plastic"; BuiltInThumbnail Plastic; Price 2; Time 2 }
+            { Name "Lithium"; BuiltInThumbnail Metal; Price 5; Time 4 }
+            { Name "Copper"; BuiltInThumbnail Metal; Price 3; Time 3 }
         ]
         Processes
         [
-            {
-                Inputs          [ Plastic ]
-                Output          Final
-            }
+            { Inputs [ "Lithium"; "Copper" ]; Output "Battery Cells" }
+            { Inputs [ "Battery Cells"; "Plastic" ]; Output Final }
         ]
-        FinalTime       4
+        FinalTime       6
     }
     SubmarketNames  [ Capacity; Durability; Weight ]
     NameGenerator   Software
     Categories
     [
         {
-            Name            "Removable AA/AAA Pack"
-            Description     "Used for early handhelds like the Game Boy."
-            Popularity      0.7
-            Retention       120
+            Name            "Single-Cell (1S)"
+            Description     "Compact form factor primarily used in handhelds and cellphones."
+            Popularity      1.0
+            Retention       180
             TimeScale       1
             Iterative       0.85
-            Submarkets      [ 1; 3; 0 ]
+            Submarkets      [ 1; 1; 3 ]
         }
         {
-            Name            "NiMH Battery"
-            Description     "Nickel-Metal Hydride for early laptops and cellphones."
-            Unlock          1989
+            Name            "Dual-Cell (2S)"
+            Description     "Medium form factor for tablets and small portable devices."
             Popularity      0.8
-            Retention       180
+            Retention       240
             TimeScale       2
             Iterative       0.85
-            Submarkets      [ 2; 2; 1 ]
+            Submarkets      [ 2; 2; 2 ]
         }
         {
-            Name            "Lithium-Ion (Li-ion)"
-            Description     "Modern standard battery chemistry."
-            Unlock          1991
-            Popularity      1.0
-            Retention       240
-            TimeScale       3
-            Iterative       0.85
-            Submarkets      [ 3; 1; 2 ]
-        }
-        {
-            Name            "Lithium-Polymer (LiPo)"
-            Description     "Thin, moldable, high-density batteries for modern smartphones."
-            Unlock          1997
+            Name            "Multi-Cell (3S+)"
+            Description     "Large form factor for high-draw hardware like laptops and consoles."
             Popularity      0.9
-            Retention       180
+            Retention       360
             TimeScale       3
             Iterative       0.85
-            Submarkets      [ 2; 0; 3 ]
+            Submarkets      [ 3; 3; 0 ]
         }
     ]
     Features
     [
         {
-            Name            "Battery Tech"
+            Name            "Battery Type"
             Spec            Hardware
-            DevTime         3
+            DevTime         4
             CodeArt         1
-            Submarkets      [ 1; 1; 1 ]
+            Submarkets      [ 2; 2; 2 ]
             Features
             [
                 {
+                    Name            "Nickel-Cadmium (NiCd)"
+                    Description     "Cheap and durable, but suffers from memory effect and is very heavy."
+                    DevTime         2
+                    CodeArt         1
+                    Level           1
+                    Submarkets      [ 1; 3; 0 ]
+                }
+                {
+                    Name            "Nickel-Metal Hydride (NiMH)"
+                    Description     "Higher capacity and less memory effect than NiCd."
+                    Unlock          1989
+                    DevTime         3
+                    CodeArt         1
+                    Level           1
+                    Submarkets      [ 2; 2; 1 ]
+                }
+                {
+                    Name            "Lithium-Ion (Li-ion)"
+                    Description     "Modern standard chemistry. High energy density and no memory effect."
+                    Unlock          1991
+                    DevTime         4
+                    CodeArt         1
+                    Level           2
+                    Submarkets      [ 3; 1; 2 ]
+                }
+                {
+                    Name            "Lithium-Polymer (LiPo)"
+                    Description     "Thin, moldable, high-density batteries."
+                    Unlock          1997
+                    DevTime         4
+                    CodeArt         1
+                    Level           2
+                    Submarkets      [ 2; 0; 3 ]
+                }
+            ]
+        }
+        {
+            Name            "Battery Systems"
+            Spec            System
+            DevTime         4
+            CodeArt         1
+            Submarkets      [ 0; 3; 0 ]
+            Features
+            [
+                {
+                    Name            "Overcharge Protection"
+                    Description     "Basic circuitry to stop charging when the battery is full."
+                    DevTime         2
+                    CodeArt         1
+                    Level           1
+                    Submarkets      [ 0; 2; 0 ]
+                }
+                {
+                    Name            "Thermal Sensors & Throttling"
+                    Description     "Actively monitors heat to prevent battery fires."
+                    Unlock          2008
+                    DevTime         4
+                    CodeArt         1
+                    Level           2
+                    Submarkets      [ 0; 3; 0 ]
+                }
+                {
                     Name            "Fast Charging"
-                    Description     "High wattage input for rapid top-ups."
+                    Description     "Allows the system to safely accept high-wattage input."
                     Unlock          2012
                     DevTime         5
                     CodeArt         1
                     Level           2
                     Submarkets      [ 2; 0; 0 ]
-                }
-                {
-                    Name            "Wireless Charging Coil"
-                    Description     "Inductive charging support."
-                    Unlock          2015
-                    DevTime         4
-                    CodeArt         1
-                    Level           2
-                    Submarkets      [ 1; 0; 1 ]
                 }
             ]
         }
